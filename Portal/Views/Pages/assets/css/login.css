@@ -1,0 +1,131 @@
+@import url(global.css);
+
+/*---------------------------------------*/
+/*-------->> LOGIN.HTML <<---------------*/
+/*---------------------------------------*/
+
+html {
+    background-color: var(--cor-fundo);
+    height: 178vh;
+}
+
+/*inicio*/
+
+.formulario {
+    width: 400px;
+    height: max-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-clip: padding-box;
+    z-index: 2;
+    box-shadow: none;
+    background-color: var(--cor-elemento1);
+    border: var(--borda-elemento1);
+    border-radius: var(--redondez);
+    box-shadow: var(--brilho-corpo);
+    transition: var(--transicao1);
+}
+
+.formulario h2 {
+    font-weight: bold;
+    color: var(--cor-geral);
+    font-size: 22px;
+}
+
+.formulario form {
+    color: var(--cor-geral);
+    font-weight: bold;
+}
+
+.input-container {
+    margin: 30px 0px;
+}
+
+.input-container input[type='text'],.input-container input[type='password'] {
+    outline: none;
+    width: 100%;
+    height: 56px;
+    border: var(--borda-elemento1);
+    padding: 10px 15px;
+    color: var(--cor-geral);
+    font-weight: bold;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.input-container input[type='text']:focus {
+    border: var(--borda-elemento1);
+}
+
+.formulario input[type='submit'] {
+    margin: 20px 0;
+    width: 267px;
+    height: 56px;
+    font-size: 25px;
+    display: inline-block;
+    background-color: var(--cor-geral);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: var(--borda-elemento1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.formulario input[type='submit']:hover {
+    background-color: var(--cor-geral);
+    color: white;
+}
+
+.formulario input[type='submit']:active {
+    background-color: white;
+    color: var(--cor-geral);
+    border: var(--borda-elemento1);
+    border-bottom: var(--borda-elemento1);
+}
+
+.input-submit-container {
+    text-align: center;
+}
+
+/*secao2*/
+
+.containeres{
+    height: max-content;
+    width: var(--width-corpo);
+    position: relative;
+    top: 125vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--redondez);
+    border: var(--borda-elemento1);
+    box-shadow: var(--brilho-corpo);
+    transition: var(--transicao1);
+    padding: 100px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.containeres h2{
+    margin: 20px 0;
+}
+
+.container1 p{
+    text-align: justify;
+}
+
+.container2{
+    display: flex;
+    text-align: justify;
+}
+
+.container2-boxes{
+    margin: 0 20px;
+}
+
+
+
+/*-------------->> LOGIN.HTML <<---------------*/

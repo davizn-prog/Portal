@@ -1,0 +1,176 @@
+/*---------------------------------------------*/
+/*--------------->> FEEDBACK.HTML <<-----------*/
+/*---------------------------------------------*/
+
+form.feedback {
+    text-align: center;
+}
+
+form.feedback input[type=text]:focus,
+form select:focus,
+form textarea:focus {
+    border: var(--bordaG);
+    color: var(--cor-geral);
+}
+
+form.feedback legend {
+    font-size: 40px;
+    color: var(--cor-geral);
+}
+
+form.feedback h3 {
+    color: var(--cor-geral);
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+    font-variant: small-caps;
+    margin: 25px 0;
+}
+
+form.feedback fieldset {
+    margin: 0 auto;
+    width: 70%;
+    border: var(--bordaG);
+    padding: 20px;
+
+}
+
+form.feedback input[type=text],
+form select {
+    width: 40%;
+    padding: 15px;
+    border: var(--borda-elemento2);
+    color: var(--cor-geral);
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+form.feedback select {
+    width: calc(40% + 33px);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: var(--bg-seta);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+    cursor: pointer;
+}
+
+form.feedback select option:nth-of-type(1) {
+    color: blue;
+}
+
+form.feedback input[type="file"] {
+    display: none;
+}
+
+form.feedback label[for=file] {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    line-height: 50px;
+    background-color: var(--cor-geral);
+    border: var(OceanDD-borda-elemento2);
+    color: white;
+    cursor: pointer;
+    font-family: tahoma;
+}
+
+form.feedback label[for=file]:hover {
+    background-color: var(--cor-geral);
+    color: white;
+}
+
+form.feedback label[for=file]:active {
+    background-color: white;
+    color: var(--cor-geral);
+}
+
+form.feedback .seletores {
+    text-align: center;
+}
+
+form.feedback .seletores input[type=checkbox],
+.seletores input[type=radio],
+.seletores label {
+    margin-left: 10px;
+}
+
+form.feedback .seletores input[type=checkbox],
+.seletores input[type=radio] {
+    width: 20px;
+    height: 20px;
+}
+
+form.feedback .seletores label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: var(--bg-seletor);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 50% 98%;
+    cursor: pointer;
+    margin-bottom: -3px;
+}
+
+form.feedback .seletores input[type=checkbox]:checked+label {
+    background-image: var(--bg-check);
+}
+
+form.feedback .seletores input[type=radio]:checked+label {
+    background-image: var(--bg-radio);
+}
+
+.container-seletor {
+    display: inline-block;
+}
+
+form.feedback .seletores div span {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+form.feedback textarea {
+    color: var(--cor-geral);
+    border: var(OceanDD-borda-elemento2);
+    resize: none;
+    width: 41%;
+    margin: 30px 0;
+    padding: 5px;
+}
+
+form.feedback textarea,
+input[type=text],
+select:focus {
+    outline: 0;
+}
+
+form.feedback #botaoenviar {
+    width: 165px;
+    height: 35px;
+    font-size: 15px;
+    background-color: var(--cor-geral);
+    border: var(OceanDD-borda-elemento2);
+    color: white;
+    cursor: pointer;
+    font-family: tahoma;
+    line-height: 35px;
+}
+
+form.feedback #botaoenviar:hover {
+    background-color: var(--cor-geral);
+    color: white;
+}
+
+form.feedback #botaoenviar:active {
+    background-color: white;
+    color: var(--cor-geral);
+}
+
+/*--------------->> FEEDBACK.HTML <<----------------*/

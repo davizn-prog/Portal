@@ -1,0 +1,71 @@
+@import url(global.css);
+
+.container-comunidade h2 {
+	color: var(--cor-destaque);
+}
+
+.comunidade {
+	width: 100%;
+}
+
+.container-comunidade-wraper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 40px 0;
+}
+
+.container-comunidade-single {
+	width: 32%;
+	margin-bottom: 10px;
+	margin-right: 1%;
+	display: flex;
+	border: var(--borda-elemento2);
+	border-radius: var(--redondez);
+	color: var(--cor-destaque);
+	background-color: var(--cor-elemento2);
+}
+
+.container-comunidade-single .img-comunidade-user-single {
+	width: 20%;
+	height: 100%;
+	border: var(--borda-elemento2);
+	border-radius: var(--redondez);
+	background-color: var(--cor-elemento2);
+}
+
+.img-comunidade-user-single img {
+	width: 100%;
+	height: 100%;
+    border-radius: var(--redondez);
+}
+
+.container-comunidade-single .info-comunidade-user-single {
+	width: 80%;
+	padding: 20px;
+}
+
+.info-comunidade-user-single h2 {
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: inherit;
+}
+
+.info-comunidade-user-single p {
+	font-size: 15px;
+	opacity: 0.4;
+	margin: 10px 0;
+}
+
+
+
+.btn-solicitar-amizade a {
+	border: var(--borda-elemento2);
+    border-radius: var(--redondez);
+    color:var(--cor-destaque);
+	padding: 5px;
+	display: inline-block;
+	font-size: 13px;
+	margin: 5px 0;
+	text-decoration: none;
+}

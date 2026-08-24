@@ -1,0 +1,103 @@
+/*-------------------------------------------*/
+/*------------>> RESENHAS.HTML <<-------------*/
+/*-------------------------------------------*/
+
+.banner-resenhas-g {
+    height: 350px;
+    width: 100%;
+    padding: 20px;
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+    border-radius: var(--redondez);
+    transition: var(--transicao1);
+    position: relative;
+    background-color: var(--cor-elemento1);
+    border: var(--borda-elemento1);
+    margin: 50px 0;
+    z-index: 10;
+}
+
+.banner-resenhas-g:hover .fundo-resenhas {
+    filter: none;
+    box-shadow: none;
+    opacity: 100%;
+    transition: var(--transicao1);
+}
+
+.banner-resenhas-g>a {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    border-radius: var(--redondez);
+    z-index: 14;
+}
+
+.fundo-resenhas{
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--redondez);
+    filter: var(--filtro-pelicula);
+    box-shadow: var(--pelicula);
+    opacity: var(--opacidade-palicula);
+}
+
+.container-info-resenhas {
+    width: 100%;
+    height: 40%;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: var(--sombrag);
+    border-radius: var(--redondez);
+    background-color: var(--cor-elemento2);
+    border: var(--borda-elemento2);
+    z-index: 12;
+    position: relative;
+}
+
+.img-resenhas {
+    height: 80px;
+    width: 80px;
+    box-shadow: var(--sombrag);
+    border-radius: var(--redondez);
+    float: left;
+    filter: var(--filtro-pelicula);
+    z-index: 12;
+}
+
+.img-resenhas img{
+    height: 100%;
+    width: 100%;
+    border-radius: var(--redondez);
+    z-index: 12;
+}
+
+.container-info-resenhas .textos {
+    float: left;
+    width: 85%;
+    height: 100%;
+    padding-left: 20px;
+    z-index: 12;
+}
+
+.container-info-resenhas h3 {
+    margin: inherit;
+    margin-left: inherit;
+    font-size: 30px;
+    display: block;
+    z-index: 12;
+    
+}
+
+.container-info-resenhas p {
+    font-size: 20px;
+    margin-top: 10px;
+    display: block;
+    z-index: 12;
+}
+/*------------>> RESENHAS.HTML <<-------------*/

@@ -1,0 +1,166 @@
+/*---------------------------------------------*/
+/*--------------->> VIDEOS.HTML <<-------------*/
+/*---------------------------------------------*/
+
+.video-livre {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 3rem 1rem;
+    max-width: 1500px;
+}
+
+.videos-container {
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 10rem 1rem;
+    max-width: 1500px;
+
+}
+
+.video {
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 15px;
+    position: relative;
+    transition: var(--transicao1);
+    border: var(--borda-elemento2);
+    box-shadow: var(--brilho-elemento1);
+}
+
+.video:hover  .imagem-thumbnail{
+    filter: none;
+    opacity: 100%;
+    transition: var(--transicao1);
+}
+
+
+.imagem-thumbnail {
+    min-width: 280px;
+    min-height: 160px;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -13px;
+    filter: var(--filtro-pelicula);
+    opacity: var(--opacidade-palicula);
+    border: var(--borda-elemento2);
+    transition: var(--transicao1);
+
+}
+
+.thumbnail::before {
+    content: attr(data-duration);
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: .1em .3em;
+    border-radius: .3em;
+    font-size: .9em;
+    z-index: 1;
+}
+
+.video-bottom {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.342);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 6px 0;
+}
+
+.video-bottom-detalhes {
+    display: inline-block;
+
+}
+
+.logo-canal {
+    margin: 10px 10px 0 10px;
+    border-radius: 50%;
+    height: 35px;
+}
+
+.titulo-video {
+    text-decoration: none;
+    color: var(--cor-geral);
+    font-size: 17px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.nome-canal {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    transition: color 150ms;
+}
+
+.nome-canal:hover {
+    color: var(--cor-geral);
+    font-weight: 500;
+}
+
+.visualizacoes {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+
+.tempo-postagem {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+/*--------------->> VIDEOS.HTML <<-------------*/
+
+/*--------------------------------------------*/
+/*------------>> PLAYER <<-------------*/
+/*--------------------------------------------*/
+
+.secao-gameplay {
+    margin-top: 100px;
+}
+
+.container-gameplay {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.container-gameplay h1 {
+    display: inline-block;
+}
+
+.player-container{
+    border-radius: var(--redondez);
+    border: var(--borda-elemento2);
+    box-shadow: var(--pelicula);
+    transition: var(--transicao1);
+}
+
+.player-container a {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.player {
+    width: 100%;
+    height: 681.5px;
+    border-radius: var(--redondez);
+    transition: var(--transicao1);
+}
+
+.proximo-gameplay,
+.anterior-gameplay {
+    top: -50px
+}
+
+/*------------>> PLAYER <<-------------*/

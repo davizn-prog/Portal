@@ -1,0 +1,1101 @@
+/*----------------------------------------------------*/
+/*----------> CONFIGURAÇÕES INICIAIS ⚙️🌣 <-----------*/
+/*----------------------------------------------------*/
+/*configurações gerais*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+section {
+    margin-top: 100px;
+}
+
+a,
+h2,
+h3 {
+    font-family: var(--familia-fonte);
+    color: var(--cor-texto);
+    margin-left: 13px;
+}
+
+h1 {
+    color: var(--cor-texto);
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    font-variant: small-caps;
+    font-family: var(--familia-fonte);
+}
+
+span,
+p,
+legend {
+    font-family: var(--familia-fonte);
+    color: var(--cor-texto);
+}
+
+/*configurações gerais*/
+
+/*importando fontes*/
+@font-face {
+    src: url(../fonts/Monoton-Regular.ttf);
+    font-family: "Nova Fonte";
+}
+
+@font-face {
+    src: url(../fonts/OCR\ A\ Extended\ Regular.ttf);
+    font-family: 'OceanDD';
+}
+
+@font-face {
+    src: url(../fonts/Franklin\ Gothic\ Heavy\ Regular.ttf);
+    font-family: "popgs";
+}
+
+/*importando fontes*/
+
+/*---------*/
+/*variaveis*/
+/*---------*/
+:root {
+    /*sombreamento*/
+
+    /*sombreamento*/
+
+    /*bordas*/
+    --redondez: 1.5rem;
+    /*/bordas*/
+
+    /*cores*/
+
+    /*cores*/
+
+    /*elementos*/
+    --transicao1: 0.3s;
+    --width-menu-lateral: 3%;
+    --width-menu-lateral-expandido: calc(var(--width-menu-lateral) + 180px);
+    --left-expandir: 100%;
+    --width-corpo: 1280px;
+    --margem-short: auto 10px;
+    --margem-videos-home: auto 200px;
+    /*elementos*/
+
+    /* >> MODULOS << */
+
+    /*menu scroll*/
+    --cor-header: grey;
+    --cor-nav: #c4c4c4;
+    --cor-secao: #b6b5b562;
+    --cor-a: black;
+
+    /* >> MODULOS << */
+}
+
+/*-----*/
+/*TEMAS*/
+/*-----*/
+
+/* ------------------------*/
+/* tema ocean deep digital */
+/* ------------------------*/
+:root {
+
+    /* geral */
+    --cor-geral: #00c0ff;
+    --cor-destaque: #00e1ff;
+    --brilho-externo: 0px 0px 100px 38px rgba(0, 158, 186, 0.8);
+    --bordaG: #00e1ff solid 3px;
+
+    /* pelicula de midia */
+    --pelicula: inset 0px 0px 90px -10px rgb(0, 158, 186);
+    --background-pelicula: rgba(0, 191, 255, 0.068);
+    --filtro-pelicula: sepia(1) saturate(5) hue-rotate(147deg) blur(1px);
+    --opacidade-palicula: 25%;
+
+    /* texto */
+    --cor-texto: #00e1ff;
+    --familia-fonte: 'OceanDD';
+
+    /* fundo */
+    --cor-fundo: #000118;
+
+    /* menu */
+    --cor-menu: rgba(0, 23, 36, 0.199);
+    --brilho-menu: inset 0px 0px 86px -4px rgba(0, 158, 186, 0.5);
+
+    /* corpo */
+    --cor-corpo: rgba(0, 17, 28, 0.89);
+    --brilho-corpo: inset 0px 0px 86px -4px rgba(0, 158, 186, 0.5);
+    --borda-layers: #00c0ff solid 1px;
+
+    /* elemento tipo 1 */
+    --cor-elemento1: rgba(0, 52, 69, 0.192);
+    --borda-elemento1: #00c0ff solid 1px;
+    --brilho-elemento1: inset 0px 0px 100px -4px rgba(0, 158, 186, 0.7);
+
+    /* elemento tipo 2 */
+    --cor-elemento2: #001724;
+    --borda-elemento2: #00e1ff solid 1px;
+
+    /* -----background-image-----*/
+
+    /* MODULOS */
+    --MOD-bg-proximo: url(../img/temas/ocean\ deep\ digital/proximo.png);
+    --MOD-bg-anterior: url(../img/temas/ocean\ deep\ digital/anterior.png);
+    --MOD-bg-verMais: url(../img/temas/ocean\ deep\ digital/ver-mais.png);
+
+    /* feedback.html */
+    --bg-seta: url(../img/temas/ocean\ deep\ digital/seta.png);
+    --bg-seletor: url(../img/temas/ocean\ deep\ digital/seletor.png);
+    --bg-check: url(../img/temas/ocean\ deep\ digital/check.png);
+    --bg-radio: url(../img/temas/ocean\ deep\ digital/radio.png);
+
+    /* musica.html */
+    --bg-pause: url(../img/temas/ocean\ deep\ digital/pause.png);
+    --bg-play: url(../img/temas/ocean\ deep\ digital/play.png);
+    --bg-playlist2: url(../img/temas/ocean\ deep\ digital/playlist\ icon2.png);
+
+    /* menu */
+    --bg-home: url(../img/temas/ocean\ deep\ digital/home.png);
+    --bg-resenhas: url(../img/temas/ocean\ deep\ digital/resenhas.png);
+    --bg-videos: url(../img/temas/ocean\ deep\ digital/videos.png);
+    --bg-tabelas: url(../img/temas/ocean\ deep\ digital/tabelas.png);
+    --bg-imagens: url(../img/temas/ocean\ deep\ digital/galeria.png);
+    --bg-mapa: url(../img/temas/ocean\ deep\ digital/mapa.png);
+    --bg-feedback: url(../img/temas/ocean\ deep\ digital/feedback.png);
+    --bg-musica: url(../img/temas/ocean\ deep\ digital/musica.png);
+    --bg-perfil: url(../img/temas/ocean\ deep\ digital/perfil.png);
+    --bg-comunidade: url(../img/temas/ocean\ deep\ digital/comunidade.png);
+    --bg-logout: url(../img/temas/ocean\ deep\ digital/logout.png);
+    --bg-expandir: url(../img/temas/ocean\ deep\ digital/expandir.png);
+    --bg-encolher: url(../img/temas/ocean\ deep\ digital/encolher.png);
+    --bg-descer: url(../img/temas/ocean\ deep\ digital/descer.png);
+    --bg-subir: url(../img/temas/ocean\ deep\ digital/subir.png);
+    --bg-tema: url(../img/temas/ocean\ deep\ digital/tema.png);
+    --bg-temags: url(../img/temas/gs\ pop/tema.png);
+    --bg-temakirito: url(../img/temas/kirito/tema.png);
+}
+
+/* ----tema ocean deep digital---- */
+
+/* ------------*/
+/* tema gs pop  */
+/* ------------*/
+[data-theme="gs-pop"]{
+
+
+    /* geral */
+    --cor-geral: #871744;
+    --cor-destaque: #9a1a4d;
+    --brilho-externo: 0px 0px 9px -1px rgba(64, 64, 64);
+    --bordaG: 5px #e1e108 solid;
+
+    /* pelicula de midia */
+    --pelicula: inherit;
+    --background-pelicula: inherit;
+    --filtro-pelicula: inherit;
+    --opacidade-palicula: 100%;
+
+    /* texto */
+    --cor-texto: #9a1a4d;
+    --familia-fonte: 'popgs';
+
+    /* fundo */
+    --cor-fundo: white;
+
+    /* menu */
+    --cor-menu: rgba(255, 255, 255, 0.4);
+    --brilho-menu: 0px 0px 9px -1px rgba(64, 64, 64);
+
+    /* corpo */
+    --cor-corpo: rgba(255, 255, 255, 0.8);
+    --brilho-corpo: 0px 0px 9px -1px rgba(64, 64, 64);
+    --borda-layers: none;
+
+    /* elemento tipo 1 */
+    --cor-elemento1: white;
+    --borda-elemento1: none;
+    --brilho-elemento1: 0px 0px 9px -1px rgba(64, 64, 64);
+
+    /* elemento tipo 2 */
+    --cor-elemento2: white;
+    --borda-elemento2: none;
+
+    /* -----background-image-----*/
+
+    /* MODULOS */
+    --MOD-bg-proximo: url(../img/temas/gs\ pop/proximo.png);
+    --MOD-bg-anterior: url(../img/temas/gs\ pop/anterior.png);
+    --MOD-bg-verMais: url(../img/temas/gs\ pop/ver-mais.png);
+
+    /* feedback.html */
+    --bg-seta: url(../img/temas/gs\ pop/seta.png);
+    --bg-seletor: url(../img/temas/gs\ pop/seletor.png);
+    --bg-check: url(../img/temas/gs\ pop/check.png);
+    --bg-radio: url(../img/temas/gs\ pop/radio.png);
+
+    /* musica.html */
+    --bg-pause: url(../img/temas/gs\ pop/pause.png);
+    --bg-play: url(../img/temas/gs\ pop/play.png);
+    --bg-playlist2: url(../img/temas/gs\ pop/playlist\ icon2.png);
+
+    /* menu */
+    --bg-home: url(../img/temas/gs\ pop/home.png);
+    --bg-resenhas: url(../img/temas/gs\ pop/resenhas.png);
+    --bg-videos: url(../img/temas/gs\ pop/videos.png);
+    --bg-tabelas: url(../img/temas/gs\ pop/tabelas.png);
+    --bg-imagens: url(../img/temas/gs\ pop/galeria.png);
+    --bg-mapa: url(../img/temas/gs\ pop/mapa.png);
+    --bg-feedback: url(../img/temas/gs\ pop/feedback.png);
+    --bg-musica: url(../img/temas/gs\ pop/musica.png);
+    --bg-expandir: url(../img/temas/gs\ pop/expandir.png);
+    --bg-encolher: url(../img/temas/gs\ pop/encolher.png);
+    --bg-tema: url(../img/temas/gs\ pop/tema.png);
+    --bg-temags: url(../img/temas/gs\ pop/tema.png);
+    --bg-temakirito: url(../img/temas/kirito/tema.png);
+
+    /* -------paleta-------- */
+    /* --cor-gs-amarelo: #e1e108;
+    --cor-gs-vermelho: #871744;
+    --cor-gs-vermelho-claro: #9a1a4d;
+    --cor-gs-vermelho-escuro: rgb(87, 17, 45);
+    --cor-gs-vermelho-claro-transparente: rgba(154, 26, 77, 0.76);
+    --cor-gs-vermelho-escuro-transparente: rgba(87, 17, 45, 0.76);
+    --cor-gs-cinza: rgb(122, 122, 122);
+    --branco-transparente: rgba(255, 255, 255, 0.8);
+    --branco-transparente1: rgba(255, 255, 255, 0.4);
+    --branco-transparente2: rgba(255, 255, 255, 0.959);
+    --borda: 5px #e1e108 solid;
+    --bordaP: 3px #e1e108 solid;
+    --bordaP-vermelho-claro: 3px #9a1a4d solid;
+    --sombra: 0px 0px 13px -1px rgba(64, 64, 64);
+    --sombrap: 0px 0px 9px -1px rgba(64, 64, 64);
+    --sombrag: 0px 0px 28px -15px rgba(64, 64, 64);
+    --cor-sombra: rgb(64, 64, 64);
+    --sombraTexto: -3px 18px 15px -19px rgba(0, 0, 0, 0.25); */
+}
+
+/*----tema gs pop----*/
+
+/* ------------*/
+/* tema kirito */
+/* ------------*/
+:root {
+    --cor-kirito: #316ced;
+    --borda-k: 5px white solid;
+    --borda-k2: 5px #316ced solid;
+}
+
+/* ----tema kirito---- */
+/*----TEMAS----*/
+/*----variaveis----*/
+
+/*CLASSES AUXILIARES*/
+.clear {
+    clear: both;
+}
+
+.hoverM:hover {
+    transition: var(--transicao1);
+    transform: scale(1.12);
+}
+
+.hoverP:hover {
+    transition: var(--transicao1);
+    transform: scale(1.04);
+}
+
+.hoverP2:hover {
+    transition: var(--transicao1);
+    transform: scale(1.01);
+}
+
+.hoverG:hover {
+    transition: var(--transicao1);
+    transform: scale(1.18);
+}
+
+/*CLASSES AUXILIARES*/
+
+/*----------------------------------------*/
+/*------------>> MODULOS 🧩<<-------------*/
+/*----------------------------------------*/
+
+/* >> SLIDER AUTOR AUITOMATICO << */
+
+.MOD-slider-autor-automatico {
+    float: left;
+    height: max-content;
+    width: 100%;
+    color: black;
+}
+
+.MOD-container-overflow {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.MOD-container-equipe {
+    all: inherit;
+}
+
+.MOD-container-autor {
+    float: left;
+}
+
+.MOD-container-titulos {
+    width: max-content;
+    display: inline-block;
+}
+
+.MOD-container-equipe h2 {
+    font-size: 30px;
+    height: 38px;
+    display: block;
+    text-align: center;
+}
+
+.MOD-container-equipe span {
+    font-size: 16px;
+    display: block;
+}
+
+.MOD-foto-perfil {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/user.png);
+    background-size: contain;
+    display: inline-block;
+}
+
+.MOD-container-equipe p {
+    margin-top: 5px;
+    font-size: 21px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.MOD-container-indice-autor {
+    width: 100%;
+    height: max-content;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.MOD-indice2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: var(--borda-elemento1);
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* >> SLIDER AUTOR AUITOMATICO << */
+
+/* >> CONTROLES GS << */
+.MOD-controle {
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+}
+
+.MOD-proximo {
+    background-image: var(--MOD-bg-proximo);
+    float: right;
+}
+
+.MOD-anterior {
+    background-image: var(--MOD-bg-anterior);
+    float: left;
+}
+
+/* >> CONTROLES GS << */
+
+/* >> CABEÇALHO DE SEÇÃO << */
+.MOD-container-cabecalho-secao {
+    padding: 0 10px;
+}
+
+.MOD-container-h1 {
+    float: left;
+    height: max-content;
+}
+
+.MOD-h1-linha {
+    width: 50%;
+    border-bottom: var(--borda-elemento2);
+}
+
+h1:hover .MOD-h1-linha {
+    width: 100%;
+}
+
+.MOD-ver-mais {
+    width: 40px;
+    height: 40px;
+    background-image: var(--MOD-bg-verMais);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    box-shadow: var(--sombrag);
+    cursor: pointer;
+    transition: var(--transicao1);
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+.MOD-ver-mais a {
+    width: 100%;
+    height: 100%;
+}
+
+/* >> CABEÇALHO DE SEÇÃO << */
+
+/* >> MENU SCROLL << */
+header {
+    width: 100%;
+}
+
+.MOD-nav-superior {
+    height: 70px;
+    width: var(--width-corpo);
+    text-align: center;
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    z-index: 3;
+    border: var(--borda-elemento2);
+    background-color: var(--cor-elemento2);
+    border-bottom-left-radius: var(--redondez);
+    border-bottom-right-radius: var(--redondez);
+    transition: top 0.3s ease;
+}
+
+.MOD-nav-header {
+    width: max-content;
+    height: 80px;
+    transition: var(--transicao1);
+    text-align: center;
+    z-index: 3;
+    color: var(--cor-geral);
+    border-radius: var(--redondez);
+    margin: 0 auto;
+    border: var(--borda-elemento2);
+    background-color: var(--cor-elemento2);
+}
+
+.MOD-nav-superior a {
+    color: var(--cor-geral);
+}
+
+.MOD-menu-navegacao a {
+    text-decoration: none;
+}
+
+.MOD-menu-navegacao ul {
+    text-align: center;
+    width: 100%;
+}
+
+.MOD-menu-navegacao li {
+    display: inline-block;
+    margin: 25px 20px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* >> MENU SCROLL << */
+
+/* >> SLIDER DEPOIMENTOS << */
+.MOD-secao-depoimentos {
+    height: 300px;
+    width: 50vw;
+    padding: 30px 50px 30px 50px;
+    box-shadow: 10px 10px 39px -6px rgba(0, 0, 0, 0.53);
+    position: relative;
+}
+
+.MOD-secao-depoimentos h1 {
+    display: inline-block;
+}
+
+.MOD-container-controles-depoimento {
+    float: left;
+    margin-left: 30px;
+}
+
+.MOD-seta {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.MOD-seta img {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.MOD-overflow-depoimentos {
+    height: 100px;
+    width: 90%;
+    overflow-y: hidden;
+}
+
+.MOD-depoimento {
+    width: 95%;
+}
+
+.MOD-depoimento p {
+    font-size: 18px;
+    margin-top: -4px;
+    line-height: 21px;
+    text-align: justify;
+}
+
+.MOD-container-seta-overflow {
+    width: max-content;
+    height: 20%;
+    position: absolute;
+    right: 15%;
+    top: 25%;
+}
+
+.MOD-seta-overflow {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: block;
+    z-index: 10;
+    margin-bottom: 10px;
+    background-image: var(--bg-subir);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.MOD-seta-overflow:last-of-type {
+    background-image: var(--bg-descer);
+    top:40px;
+}
+
+
+
+
+/* >> SLIDER DEPOIMENTOS << */
+/*------------>> MODULOS 🧩<<-------------*/
+/*----------> CONFIGURAÇÕES INICIAIS ⚙️🌣 <-----------*/
+
+/*------------>> INDICE <<-------------*/
+
+/*--------------------------------------*/
+/*------------>> FUNDO 🏞️<<------------*/
+/*--------------------------------------*/
+.corpo-de-fundo {
+    padding-top: 100px;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-attachment: fixed;
+    background-position: 5% 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-fundo);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* >> imagens << */
+
+.fig-fundo {
+    width: 400px;
+    height: 10px;
+    transform: rotate(-25.5deg);
+    position: absolute;
+    animation-name: diagonal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-radius: 20px;
+    background-color: var(--cor-geral);
+    box-shadow: var(--brilho-externo);
+}
+
+@keyframes diagonal {
+    to {
+        top: var(--top-final);
+        left: var(--left-final);
+    }
+}
+
+/*------------>> FUNDO 🏞️<<------------*/
+
+/*---------------------------------------------*/
+/*------------>> MENU LATERAL 🈁<<-------------*/
+/*---------------------------------------------*/
+
+.menu-lateral {
+    position: fixed;
+    left: 10px;
+    top: 5px;
+    height: 98%;
+    width: var(--width-menu-lateral);
+    box-sizing: border-box;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+.expandir-btn {
+    width: 38px;
+    height: 35px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: absolute;
+    top: 28px;
+    left: 100%;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: var(--cor-elemento2);
+    border: var(--borda-elemento2);
+}
+
+.expandir-btn div {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.expandir {
+    z-index: 3;
+    background-image: var(--bg-expandir);
+
+
+}
+
+.encolher {
+    z-index: 1;
+    visibility: hidden;
+    background-image: var(--bg-encolher);
+}
+
+.menu2 {
+    height: 90%;
+    width: 100%;
+    background-color: var(--cor-menu);
+    box-shadow: var(--brilho-menu);
+    border: var(--borda-layers);
+    text-align: left;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.menu2-container-navegacao {
+    width: 500px;
+}
+
+.menu2-opcao {
+    height: max-content;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu2 a {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin: 0 15px 0 15px;
+
+}
+
+.icone-menu {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: var(--cor-elemento2);
+    border: var(--borda-elemento2);
+}
+
+a[href="http://localhost/Portal/"]>.icone-menu {
+    background-image: var(--bg-home);
+}
+
+a[href="http://localhost/Portal/perfil"]>.icone-menu {
+    background-image: var(--bg-perfil);
+}
+
+a[href="http://localhost/Portal/comunidade"]>.icone-menu {
+    background-image: var(--bg-comunidade);
+}
+
+a[href="http://localhost/Portal/resenhas"]>.icone-menu {
+    background-image: var(--bg-resenhas);
+}
+
+a[href="http://localhost/Portal/videos"]>.icone-menu {
+    background-image: var(--bg-videos);
+}
+
+a[href="http://localhost/Portal/feedback"]>.icone-menu {
+    background-image: var(--bg-feedback);
+}
+
+a[href="http://localhost/Portal/musica"]>.icone-menu {
+    background-image: var(--bg-musica);
+}
+
+a[href="http://localhost/Portal/?loggout"]>.icone-menu {
+    background-image: var(--bg-logout);
+}
+
+
+
+.menu2 span {
+    height: 100%;
+    position: relative;
+    top: -10px;
+    font-size: 30px;
+    color: var(--cor-geral);
+    transition: 0.5s;
+    font-family: 'popgs';
+}
+
+.menu3 {
+    height: 20%;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 3;
+    transition: 0.5s;
+}
+
+.temas-btn {
+    width: 100%;
+    height: calc(100%/3);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center;
+    cursor: pointer;
+    background-color: var(--cor-menu);
+    box-shadow: var(--brilho-menu);
+    border: var(--borda-layers);
+    margin-bottom: 10px;
+}
+
+.tema-oceandd {
+    background-image: var(--bg-tema);
+    z-index: 5;
+}
+
+.tema-genshin {
+    background-image: var(--bg-temags);
+    z-index: 5;
+}
+
+.tema-kirito {
+    background-image: var(--bg-temakirito);
+    z-index: 5;
+
+}
+/*------------>> MENU LATERAL 🈁<<-------------*/
+
+/*--------------------------------------------------*/
+/*------------>> pedidos de amizade ⤵<<-------------*/
+/*---------------------------------------------------*/
+
+.friends-request-feed{
+	width:15%;
+    height: max-content;
+	margin-left: 2%;
+	padding:30px;
+	border: var(--borda-elemento2);
+    border-radius: var(--redondez);
+    color:var(--cor-destaque);
+    background-color:var(--cor-elemento2);
+	border-radius:10px;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+.friend-request-single{
+	display: flex;
+	margin-bottom: 20px;
+	padding:10px 0;
+	border-bottom:var(--borda-elemento2);
+}
+
+.friend-request-single img{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+}
+
+.friend-request-single-info{
+	padding:4px 10px;
+}
+
+.friend-request-single-info h3{
+	font-size: 15px;
+}
+
+.friend-request-single-info a{
+	font-size: 13px;
+}
+/*------------>> pedidos de amizade ⤵<<-------------*/
+
+
+/*--------------------------------------*/
+/*------------>> CORPO ⤵️<<-------------*/
+/*--------------------------------------*/
+
+main.inicio-main {
+    padding-top: 150px;
+    padding-bottom: 6px;
+}
+
+.container-central {
+    max-width: var(--width-corpo);
+    height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translatex(calc(-50%));
+    border-radius: 30px;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.container-central__conteudos {
+    padding: 50px 35px 80px 35px;
+    width: 100%;
+    background-color: var(--cor-corpo);
+    box-shadow: var(--brilho-corpo);
+    border: var(--borda-layers);
+    border-radius: 6rem;
+}
+
+/*------------>> CORPO ⤵️<<-------------*/
+
+/*--------------------------------------*/
+/*------------->> RODAPE <<-------------*/
+/*--------------------------------------*/
+
+.rodape {
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 100%;
+    border-radius: 1rem;
+    border: var(--borda);
+    text-align: center;
+    padding: 15px 30px;
+    background-color: var(--cor-elemento1);
+    box-shadow: var(--brilho-elemento1);
+    border: var(--borda-elemento1);
+}
+
+.rodape div {
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 4px 15px;
+    border: var(--borda);
+    width: max-content;
+    height: auto;
+    background-color: var(--cor-elemento2);
+    border: var(--borda-elemento2);
+}
+
+.rodape p {
+    margin: 5px 0;
+    color: var(--cor-texto);
+    font-size: 15px;
+    font-family: var(--familia-fonte);
+}
+/*------------->> RODAPE <<-------------*/
+
+/*---------------------------------------------*/
+/*------------->> MEDIA QUERIES <<-------------*/
+/*---------------------------------------------*/
+
+/*---------------------------------------------*/
+/*--------------- tela > 1080p ----------------*/
+/*---------------------------------------------*/
+
+/*---------------------------------------------*/
+/*---------------->> LOGIN <<------------------*/
+/*---------------------------------------------*/
+
+@media screen and (min-width: 1921px) {
+
+    .centro,
+    .container-texto p {
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    .formulario {
+        height: calc(100% + 17px);
+        top: -9px;
+    }
+
+}
+
+/*---------------->> LOGIN <<------------------*/
+/*--------------- tela > 1080p ----------------*/
+
+/*---------------------------------------------*/
+/*---------------- tela 952px -----------------*/
+/*---------------------------------------------*/
+
+/*---------------------------------------------*/
+/*---------------->> LOGIN <<------------------*/
+/*---------------------------------------------*/
+
+@media screen and (max-width: 952px) {
+    .cabecalho {
+        text-align: center;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .cabecalho a {
+        margin: 0;
+    }
+
+    .cabecalho img {
+        height: 70px;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        padding: 0px 2%;
+    }
+
+    .formulario {
+        width: 60%;
+        max-width: 400px;
+        height: auto;
+        top: 0;
+        float: right;
+        margin: 30px 0px;
+    }
+
+    .lista-container {
+        float: left;
+        width: 40%;
+        max-width: 500px;
+        height: auto;
+        padding: 30px 0;
+        margin-top: 100px;
+    }
+
+    .container-texto p {
+        padding: 0 4%;
+    }
+}
+
+/*----------- tela 773px -----------*/
+
+/*---------------------------------------------*/
+/*---------------->> LOGIN <<------------------*/
+/*---------------------------------------------*/
+
+@media screen and (max-width: 773px) {
+    .cabecalho {
+        text-align: center;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .cabecalho a {
+        margin: 0;
+    }
+
+    .cabecalho img {
+        height: 70px;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        padding: 0px 2%;
+        text-align: center;
+    }
+
+    .formulario {
+        text-align: left;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        top: 0;
+        float: none;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    .lista-container {
+        float: none;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        padding: 30px 0;
+        display: inline-block;
+        margin: 30px 0px;
+    }
+
+    .formulario h2 {
+        text-align: center;
+    }
+
+    .container-texto p {
+        padding: 0 4%;
+    }
+
+    .container-centro-unico {
+        padding: 70px 15px;
+        float: none;
+        display: inline-block;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .container-centro-unico p {
+        padding: 0 4%;
+    }
+}
+
+/*------------->> MEDIA QUERIES <<-------------*/
