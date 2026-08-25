@@ -1,6 +1,26 @@
 
 function initHome() {
 
+    $(function () {
+
+        //função do movimentar do scroll
+        $(window).scroll(function () {
+            let janelaPosY = $(window).scrollTop();//armazena a posição atual do scroll vertical da janela
+
+            $('.container-central__conteudos').each(function () {
+                if (janelaPosY > 71) {
+                    $('.boas-vindas').css({
+                        'opacity': '0%',
+                    });
+                } else {
+                    $('.boas-vindas').css({
+                        'opacity': '100%',
+                    });
+                }
+            });
+        });
+    });
+
     /*--------------------------------
     ------------ SHORTS --------------
     -----------------------------------*/
@@ -240,11 +260,9 @@ function initHome() {
 
         $('.container-banner-videos-g').css('width', tamanhoOverflow);
 
-        // Deixei scrollLeft direto aqui para ele já iniciar na posição certa sem fazer a animação no load da página
         $('.overflow-video-g').scrollLeft(scrollInicial);
 
         // EVENTOS NATIVOS DIRETOS
-        // Como os vídeos já foram adicionados no DOM pelo for acima, podemos buscar todos eles.
         $('.video-g').each(function () {
 
             // Escuta o "Play" de cada vídeo
@@ -266,7 +284,6 @@ function initHome() {
             });
         });
 
-        // 3. Modificadores do Carrossel (Anterior / Próximo)
         $('.controles-video-home>.MOD-anterior').click(function () {
             if (posicaoAtual > 0) {
                 $('.video-g')[posicaoAtual].pause(); // Quando pausar, o eventListener acima vai botar a película automaticamente

@@ -1,5 +1,5 @@
 <header>
-    <link href="<?php echo INCLUDE_PATH_STATIC?>assets/css/videos.css" type="text/css" rel="stylesheet" />
+    <link href="<?php echo INCLUDE_PATH_STATIC ?>assets/css/videos.css" type="text/css" rel="stylesheet" />
 </header>
 <section class="secao-gameplay">
 
@@ -25,10 +25,10 @@
 </section>
 <section id="Videos" class="MOD-secao section-videos" target="sec" goto=""><!-- MOD - menu-scroll -->
     <div class="video-livre">
-
         <article class="video hoverP" name="gameplay01.mp4">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay01.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay01.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -47,10 +47,10 @@
                 </div><!--dados-->
             </div><!--dados inferiores-->
         </article><!--video-->
-
         <article class="video hoverP" name="gameplay02.mp4">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay02.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay02.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -72,7 +72,8 @@
 
         <article class="video hoverP" name="gameplay03.mp4">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay03.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay03.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -94,7 +95,8 @@
 
         <article class="video hoverP" name="gameplay04.mp4">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay04.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay04.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -115,7 +117,8 @@
         </article><!--video-->
         <article class="video hoverP" name="gameplay05.mp4">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay05.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay05.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -136,7 +139,8 @@
         </article><!--video-->
         <article class="video hoverP" name="gameplay06.mp4" classificar="banjo">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay06.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay06.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -157,7 +161,8 @@
         </article><!--video-->
         <article class="video hoverP" name="gameplay07.mp4" classificar="warframe">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay07.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay07.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -178,7 +183,8 @@
         </article><!--video-->
         <article class="video hoverP" name="gameplay08.mp4" classificar="warframe">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay08.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay08.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -199,7 +205,8 @@
         </article><!--video-->
         <article class="video hoverP" name="gameplay09.mp4" classificar="halo">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay09.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay09.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -223,7 +230,8 @@
 
         <article class="video hoverP" name="gameplay10.mp4" classificar="warframe">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
-                <img class="imagem-thumbnail" src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay10.jpg" alt="">
+                <img class="imagem-thumbnail"
+                    src="<?php echo INCLUDE_PATH_STATIC ?>assets/img/thumbs/thumb-gameplay10.jpg" alt="">
             </a><!--thumbnail-->
             <div class="video-bottom">
                 <a href="">
@@ -246,6 +254,6 @@
 
 
 
-        
+
     </div><!--container de videos nao agrupados-->
 </section><!--seção de videos-->

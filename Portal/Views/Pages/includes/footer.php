@@ -12,7 +12,6 @@
 <script type="text/javascript" src="<?php echo INCLUDE_PATH_STATIC ?>assets/js/login.js"></script>
 <script type="text/javascript" src="<?php echo INCLUDE_PATH_STATIC ?>assets/js/minigame.js"></script>
 <script type="text/javascript" src="<?php echo INCLUDE_PATH_STATIC ?>assets/js/musica.js"></script>
-<script type="text/javascript" src="<?php echo INCLUDE_PATH_STATIC ?>assets/js/player.js"></script>
 <script type="text/javascript" src="<?php echo INCLUDE_PATH_STATIC ?>assets/js/video.js"></script>
 </body>
 

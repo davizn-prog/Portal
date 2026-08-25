@@ -2,72 +2,60 @@
 ------------ navegação via requisição ajax ------------
 -------------------------------------------------------*/
 
-$(document).ready(function () {
+// Função centralizada para gerenciar a exibição e inicializar scripts
+function tratarRota(rota) {
+    initScrollMenu();
 
-    // 1. Pega a URL atual inteira
-    let urlAtual = window.location.href;
-
-    // 2. Extrai a última parte da URL (ex: "videos" ou "perfil")
-    let rotaInicial = urlAtual.split('/').filter(Boolean).pop();
-
-    // 3. Inicializa os scripts globais que precisam rodar sempre
-    initScrollMenu(); // Se essa função precisar rodar em todas as telas
-
-    // 4. Executa a função específica da página atual
-    switch (rotaInicial) {
+    switch (rota) {
         case 'videos':
+            $('#boasVindas').fadeOut();
             initVideos();
             initPlayer();
             break;
 
         case 'musica':
+            $('#boasVindas').fadeOut();
             initMusica();
             break;
 
         case 'minigame':
+            $('#boasVindas').fadeOut();
             initMinigame();
             break;
 
-        case 'Portal': // Ajuste aqui para o nome da sua pasta raiz caso necessário
+        // Casos que representam a página inicial (Feed)
+        case 'Portal':
         case 'feed':
-        case '': // Caso seja localhost puro
+        case '':
+        case undefined:
+            $('#boasVindas').fadeIn();
             initHome();
-            initVideos(); // Se o feed também usar os carrosséis de vídeo
+            initVideos();
+            break;
+
+        default:
+            $('#boasVindas').fadeOut();
             break;
     }
+}
+
+// execução no F5 (Carregamento inicial)
+$(document).ready(function () {
+    let urlAtual = window.location.href;
+    let rotaInicial = urlAtual.split('/').filter(Boolean).pop();
+
+    tratarRota(rotaInicial);
 });
 
+// execução nos cliques dinâmicos
 $(document).on('click', 'a.link-ajax', function (e) {
     e.preventDefault();
 
-    let pagina = $(this).attr('href'); // Ex: "http://localhost/Portal/videos"
-
-    // Pega apenas a palavra depois da última barra (ex: "videos")
+    let pagina = $(this).attr('href');
     let nomeRota = pagina.split('/').filter(Boolean).pop();
 
     $('.container-central__conteudos').load(pagina + ' .container-central__conteudos > *', function () {
-
-        initScrollMenu();
-
-        switch (nomeRota) {
-            case 'videos':
-                initVideos();
-                initPlayer();
-                break;
-
-            case 'musica':
-                initMusica();
-                break;
-
-            case 'minigame':
-                initMinigame();
-                break;
-
-            default: // Caso seja a raiz (home)
-                initHome();
-                initVideos();
-                break;
-        }
+        tratarRota(nomeRota);
     });
 
     history.pushState(null, '', pagina);
@@ -82,7 +70,7 @@ function initScrollMenu() {
     /* PRECISA ATUALIZAR O CAMINHO ATÉ O ARQUIVO AQUI ABAIXO */
     /* PRECISA ATUALIZAR O NOME DO ARQUIVO AQUI ABAIXO */
 
-    var directory = '\Portal\Portal\Views\Pages'//<--- ATUALIZAR CAMINHO!
+    var directory = '\Portal\ '//<--- ATUALIZAR CAMINHO!
     var arquivo = 'home.php?'//<--- ATUALIZAR ARQUIVO .html/.php!
 
     var secoes = $('.MOD-secao').length;//armazena a quantidade de seções
@@ -106,8 +94,6 @@ function initScrollMenu() {
             }
         }
     }
-
-    console.log(secaoNome + '\n' + arraySecao)
 
     //função do movimentar do scroll
     $(window).scroll(function () {//a função acontece ao dar o scroll
@@ -165,7 +151,7 @@ function initScrollMenu() {
     $('.MOD-menu-navegacao a').click(function () {//pega o <a> das nav e aplica a função
 
         goto = $(this).attr('goto')//armazena o valor do parametro goto numa variavel
-        history.pushState(null, "", directory + arquivo + goto);//e aoplica esse valor no final da url
+        // history.pushState(null, "", goto); //e aoplica esse valor no final da url
 
         var href = $(this).attr('href'); //variavel href recebe o conteudo do href de a
 

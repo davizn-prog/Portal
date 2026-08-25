@@ -7,13 +7,13 @@ class Utilidades
 
     public static function redirect($url)
     {
-        echo '<script>window.location.href="' . $url . '"</script>';
-        die();
+        header("Location: " . $url);
+        exit();
     }
 
     public static function alerta($mensagem)
     {
-        echo '<script>alert("'.$mensagem.'")</script>';
+        echo '<script>console.log("' . $mensagem . '")</script>';
     }
 }
 

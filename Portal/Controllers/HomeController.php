@@ -5,7 +5,7 @@ class HomeController
 {
     public function index()
     {
-        // 1. Trata o Logout
+        // logout
         if (isset($_GET['loggout'])) {
             session_unset();
             session_destroy();
@@ -13,13 +13,13 @@ class HomeController
             return;
         }
 
-        // 2. Se NÃO estiver logado, manda pro login
+        // se nao estiver logado, manda pro login
         if (!isset($_SESSION['login'])) {
             \Portal\Utilidades::redirect(INCLUDE_PATH . 'login');
             return;
         }
 
-        // 3. Trata aceitar/recusar amizade
+        // aceitar/recusar amizade
         if (isset($_GET['recusarAmizade'])) {
             $idEnviou = (int) $_GET['recusarAmizade'];
             \Portal\Models\UsuariosModel::atualizarPedidoAmizade($idEnviou, 0);
@@ -33,7 +33,7 @@ class HomeController
             }
         }
 
-        // 4. Trata Post no Feed
+        // post no Feed
         if (isset($_POST['post_feed'])) {
             if ($_POST['post_content'] == '') {
                 \Portal\Utilidades::alerta('Não permitimos posts vazios :(');
@@ -44,7 +44,7 @@ class HomeController
             \Portal\Utilidades::redirect(INCLUDE_PATH);
         }
 
-        // 5. POR ÚLTIMO: Renderiza o Feed (somente se estiver logado)
+        // renderiza o Feed somente se estiver logado
         \Portal\Views\MainView::render('feed');
     }
 }

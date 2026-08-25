@@ -1,19 +1,20 @@
 <head>
     <link href="<?php echo INCLUDE_PATH_STATIC ?>assets/css/home.css" type="text/css" rel="stylesheet" />
-    <link href="<?php echo INCLUDE_PATH_STATIC ?>assets/css/feed.css" type="text/css" rel="stylesheet" />
 </head>
+
 <!-- feed de postagens -->
 <!-- modulo - cabeçalho de seção-->
-<div class="MOD-container-cabecalho-secao">
-    <div class="MOD-container-h1">
-        <h1>Postagens</h1>
-        <div class="MOD-h1-linha"></div><!--linha que aparece em baixo do texto-->
-    </div>
-    <div class="MOD-ver-mais hoverP2"><a class="link-ajax" href=""></a></div><!--link pra pagina da seção-->
-    <div class="clear"></div><!--limpeza de flutuação-->
-</div><!-- modulo - cabeçalho de seção-->
 
 <section id="Postagens" class="MOD-secao home-novidades" target="sec" goto="">
+
+    <div class="MOD-container-cabecalho-secao">
+        <div class="MOD-container-h1">
+            <h1>Postagens</h1>
+            <div class="MOD-h1-linha"></div><!--linha que aparece em baixo do texto-->
+        </div>
+        <div class="MOD-ver-mais hoverP2"><a class="link-ajax" href=""></a></div><!--link pra pagina da seção-->
+        <div class="clear"></div><!--limpeza de flutuação-->
+    </div><!-- modulo - cabeçalho de seção-->
 
     <div class="feed">
         <div class="feed-wraper">
@@ -26,29 +27,33 @@
             </div><!--feed-form-->
 
             <?php
+
             $retrievePosts = \Portal\Models\HomeModel::retrieveFriendsPosts();
 
             foreach ($retrievePosts as $key => $value) {
-
 
                 ?>
 
                 <div class="feed-single-post">
                     <div class="feed-single-post-author">
                         <div class="img-single-post-author">
-                            <?php
-                            if (!isset($value['me']) && $value['img'] == '') {
-                                ?>
+
+                            <?php if (!isset($value['me']) && $value['img'] == '') { ?>
+
                                 <img src="<?php echo INCLUDE_PATH_STATIC ?>imagens/avatar.jpg" />
+
                             <?php } else if (!isset($value['me'])) { ?>
+
                                     <img src="<?php echo INCLUDE_PATH ?>uploads/<?php echo $value['img'] ?>" />
+
                             <?php } ?>
 
-                            <?php
-                            if (isset($value['me']) && $_SESSION['img'] == '') {
-                                ?>
+                            <?php if (isset($value['me']) && $_SESSION['img'] == '') { ?>
+
                                 <img src="<?php echo INCLUDE_PATH_STATIC ?>imagens/avatar.jpg" />
+
                             <?php } else if (isset($value['me'])) { ?>
+
                                     <img src="<?php echo INCLUDE_PATH ?>uploads/<?php echo $_SESSION['img'] ?>" />
                             <?php } ?>
 
@@ -126,9 +131,10 @@
         <!--container dos shorts-->
         <div class="container-shorts">
 
+
+
             <!--short-->
             <div class="short hoverM" name="gameplay01.mp4">
-
                 <a class="link-ajax" href="videos">
                     <video muted loop class="short-video ">
                         <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short01.mp4" />
@@ -146,8 +152,11 @@
                         </div><!--container das views-->
                     </div><!--metadados do video-->
                 </a><!--o link para o exbibidor-->
-
             </div><!--short-->
+
+
+
+
             <!--short-->
             <div class="short hoverM" name="gameplay02.mp4">
 
@@ -371,6 +380,13 @@
     <!--container dos banners dos videos-->
     <div class="container-banner-videos">
         <div class="container-banner-videos-m">
+            <div class="container-video hoverP2">
+                <video src="<?php echo INCLUDE_PATH_STATIC ?>"></video><!--video-->
+            </div><!--container de video-->
+            <div class="container-video hoverP2">
+
+                <video src="<?php echo INCLUDE_PATH_STATIC ?>"></video><!--video-->
+            </div><!--container de video-->
             <div class="container-video hoverP2">
                 <video src="<?php echo INCLUDE_PATH_STATIC ?>"></video><!--video-->
             </div><!--container de video-->

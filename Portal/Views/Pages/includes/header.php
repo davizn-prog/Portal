@@ -8,7 +8,6 @@
     <meta name="description" content="Exemplo de descrição para o meu site">
     <meta name="keyword" content="palavras-chaves,separadas,por,virgula">
     <meta name="author" content="Davi Cavalcante">
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <link href="<?php echo INCLUDE_PATH_STATIC ?>assets/css/global.css" rel="stylesheet">
     <script>
@@ -18,9 +17,13 @@
 </head>
 
 <body>
+    <?php if (isset($filename) && ($filename === 'feed' || $filename === 'home' || $filename === '')): ?>
+        <h1 class="boas-vindas" id="boasVindas">Bem-vindo, <?php echo $_SESSION['nome']; ?></h1>
+    <?php endif; ?>
+
     <!-- pedidos de amizade -->
     <div class="friends-request-feed">
-        <h4>Solicitações de amizade</h4>
+        <h3>Solicitações de amizade</h3>
 
         <?php
 
@@ -36,7 +39,6 @@
                     </p>
                 </div>
             </div>
-
         <?php } ?>
     </div>
     <!-- pedidos de amizade -->

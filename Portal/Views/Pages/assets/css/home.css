@@ -1,3 +1,105 @@
+main.inicio-main{
+    padding-top: 170px;
+}
+
+/*----------------------------------------*/
+/*-------------| POSTAGENS |--------------*/
+/*----------------------------------------*/
+
+@import url(global.css);
+
+section.main-feed{
+	display: flex;
+	height:100%;
+}
+
+.feed{
+	overflow-y: auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.feed-wraper{
+	width:100%;
+}
+
+.feed-single-post{
+	padding:30px 40px;
+	margin-bottom: 50px;
+	border-radius: var(--redondez);
+	border-bottom: var(--borda-elemento1);
+	background-color: var(--cor-elemento1);
+}
+
+.feed-single-post-content{margin:10px 0;}
+
+.feed-single-post-content p{
+	font-size: 18px;
+}
+
+.feed-single-post-content img{
+	max-width: 100%;
+	margin:20px 0;
+}
+
+.feed-single-post-author{
+	display: flex;
+	color:var(--cor-destaque);
+}
+.feed-single-post-author img{
+	width:50px;
+	height: 50px;
+	border-radius:50%;
+}
+
+.img-single-post-author{
+	padding:0 10px;
+}
+
+
+.feed-single-post-author h3{
+	width:100%;
+	margin-left: inherit;
+}
+
+.feed-single-post-author p{
+	opacity: 0.4;
+	margin-top:3px;
+}
+
+.feed-form form{
+	width:100%;
+}
+
+.feed-form textarea{
+	width:100%;
+	height:120px;
+	border: var(--borda-elemento2);
+    border-radius: var(--redondez);
+    color:var(--cor-destaque);
+    background-color:var(--cor-elemento2);
+	padding:25px;
+	font-size: 18px;
+	resize: vertical;
+	outline: 0;
+}
+
+.feed-form input[type=submit]{
+	width:150px;
+	display: block;
+	cursor: pointer;
+	color: white;
+	font-size: 20px;
+	margin: 10px 0 50px 0;
+	height:40px;
+	border: var(--borda-elemento2);
+    border-radius: var(--redondez);
+    background-color:var(--cor-geral);
+	font-family: var(--familia-fonte);
+}
+/*-------------| POSTAGENS |--------------*/
+
 /*----------------------------------------*/
 /*-------------| NOVIDADES |--------------*/
 /*----------------------------------------*/
