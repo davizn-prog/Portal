@@ -120,11 +120,11 @@
 
     <h2>Novidade por aqui</h2>
 
-    <!--MODULO - controles gs-->
+    <!--MODULO - controles -->
     <div class="MOD-container-controles controles-shorts">
         <div class="MOD-controle MOD-anterior"></div>
         <div class="MOD-controle MOD-proximo"></div>
-    </div><!--MODULO - controles gs-->
+    </div><!--MODULO - controles -->
 
     <!--container pro overflow dos shorts-->
     <div class="shorts-overflow">

@@ -132,14 +132,24 @@ function initScrollMenu() {
 
         //abaixo aplica o menu fixo ao descer o scroll
         if (janelaPosY >= navPosY) {//se a posição sperior da janela for menor que ou igual ao da nav do header
-            $('.MOD-nav-superior').css('display', 'block')
+            $('.menu2-h').css({
+                'background-color' : 'var(--cor-elemento2)',
+                'box-shadow' : 'none',
+            })
             $('.MOD-nav-superior').css({
-                'top': '-5px'
+                'opacity': 'var(--nav-opacidade-show)',
+                'display': 'block',
+                'top': 'var(--nav-top-show)'
             }, 1);//aparece a nav superior
             $('.MOD-nav-header ul').hide();
         } else if ((janelaPosY >= 0) && (janelaPosY < navPosY)) {//se a posição sperior da janela for maior que ou igual a zero e se for menor que a posição superior da nav do header
+            $('.menu2-h').css({
+                'background-color' : 'initial',
+                'box-shadow' : 'var(--brilho-menu)',
+            })
             $('.MOD-nav-superior').css({
-                'top': '-80px'
+                'opacity': 'var(--nav-opacidade-hide)',
+                'top': 'var(--nav-top-show)',
             }, 1);
             $('.MOD-nav-header ul').show();
         }
@@ -218,10 +228,12 @@ $(function () {
 -------------------------------*/
 
 $(function () {
+    var width = $('.menu-lateral').width();;
+
     //expandir menu
     $('.expandir').click(function () {
         $('.menu-lateral').css({
-            'width': 'calc(var(--width-menu-lateral) + 200px)',
+            'width': 'calc(' + width + 'px + 190px)',
         });
         $('.expandir').css({
             'visibility': 'hidden',
@@ -236,7 +248,7 @@ $(function () {
     //encolher menu
     $('.encolher').click(function () {
         $('.menu-lateral').css({
-            'width': 'var(--width-menu-lateral)',
+            'width': width,
         });
 
         $('.encolher').css({
@@ -255,10 +267,10 @@ $(function () {
 -------------------------------*/
 $(function () {
 
-    var novoTema = 'gs-pop'
+    var novoTema = 'aura'
 
-    $('.tema-genshin').click(function () {
-        // Altera a tag <html> para <html data-theme="gs-pop">
+    $('.tema-aura').click(function () {
+        // Altera a tag <html> para <html data-theme="aura">
         document.documentElement.setAttribute('data-theme', novoTema);
 
         // Salva no navegador para não perder quando trocar de página

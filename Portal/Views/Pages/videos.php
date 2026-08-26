@@ -1,19 +1,20 @@
 <header>
     <link href="<?php echo INCLUDE_PATH_STATIC ?>assets/css/videos.css" type="text/css" rel="stylesheet" />
 </header>
+
 <section class="secao-gameplay">
 
     <div class="container-gameplay">
 
         <h1>Título da gameplay</h1>
 
-        <!--MODULO - controles gs-->
+        <!--MODULO - controles-->
         <div class="MOD-container-controles">
             <div class="MOD-controle MOD-anterior anterior-gameplay" videoAnterior></div><!--botao-->
             <div class="MOD-controle MOD-proximo proximo-gameplay" proximoVideo></div><!--botao-->
         </div><!--container dos controles-->
         <div class="clear"></div><!--limpeza de flutuação-->
-        <!--MODULO - controles gs-->
+        <!--MODULO - controles -->
 
     </div><!--container superior - dos botoes superiores e titulo-->
 
@@ -23,6 +24,7 @@
         </video><!--o video-->
     </div><!--container-->
 </section>
+
 <section id="Videos" class="MOD-secao section-videos" target="sec" goto=""><!-- MOD - menu-scroll -->
     <div class="video-livre">
         <article class="video hoverP" name="gameplay01.mp4">
@@ -69,7 +71,6 @@
                 </div><!--dados-->
             </div><!--dados inferiores-->
         </article><!--video-->
-
         <article class="video hoverP" name="gameplay03.mp4">
             <a href="javascript:void(0)" class="thumbnail " data-duration="12:24">
                 <img class="imagem-thumbnail"

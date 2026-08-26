@@ -51,6 +51,75 @@
     </nav><!--menu que vai ser ativao ao descer pra baixo do menu header-->
     <!-- MODULO - menu superior-->
 
+    <!-- menu horizontal-->
+    <nav class="menu-horizontal">
+        <div class="menu2-h">
+            <div class="menu2-container-navegacao-h">
+                <div class="menu2-opcao-h">
+                    <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Início</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>perfil">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Perfil</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>comunidade">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Comunidade</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>resenhas">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Resenhas</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>videos">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Videos</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>musica">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Musica</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>feedback">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Feedback</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a>
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Solicitações</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a>
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Temas</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a class="" href="<?php echo INCLUDE_PATH ?>?loggout">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Logout</span>
+                </div><!--container da opção-->
+            </div>
+        </div><!-- o bloco do menu com links pras paginas -->
+        <!-- menu horizontal -->
+    </nav><!--menu horizontal-->
+
     <!--menu leteral-->
     <nav class="menu-lateral">
         <div class="expandir-btn">
@@ -116,8 +185,7 @@
         </div><!--o segundo bloco do menu com links pras paginas-->
         <div class="menu3">
             <div class="tema-oceandd temas-btn"></div>
-            <div class="tema-genshin temas-btn"></div>
-            <div class="tema-kirito temas-btn"></div>
+            <div class="tema-aura temas-btn"></div>
         </div><!--terceiro bloco do menu com a troca de temas-->
     </nav><!--menu lateral-->
 

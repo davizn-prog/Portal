@@ -6,6 +6,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-geral) var(--cor-fundo);
 }
 
 html,
@@ -56,7 +58,7 @@ legend {
 
 @font-face {
     src: url(../fonts/Franklin\ Gothic\ Heavy\ Regular.ttf);
-    font-family: "popgs";
+    font-family: "aura";
 }
 
 /*importando fontes*/
@@ -84,7 +86,10 @@ legend {
     --left-expandir: 100%;
     --width-corpo: 1280px;
     --margem-short: auto 10px;
-    --margem-videos-home: auto 200px;
+    --nav-top-hide: -80px;
+    --nav-top-show: -5px;
+    --nav-opacidade-hide: 0%;
+    --nav-opacidade-show: 100%;
     /*elementos*/
 
     /* >> MODULOS << */
@@ -128,7 +133,7 @@ legend {
     --cor-fundo: #000118;
 
     /* menu */
-    --cor-menu: rgba(0, 23, 36, 0.199);
+    --cor-menu: rsba(0, 23, 36, 0.199);
     --brilho-menu: inset 0px 0px 86px -4px rgba(0, 158, 186, 0.5);
 
     /* corpo */
@@ -180,16 +185,15 @@ legend {
     --bg-descer: url(../img/temas/ocean\ deep\ digital/descer.png);
     --bg-subir: url(../img/temas/ocean\ deep\ digital/subir.png);
     --bg-tema: url(../img/temas/ocean\ deep\ digital/tema.png);
-    --bg-temags: url(../img/temas/gs\ pop/tema.png);
-    --bg-temakirito: url(../img/temas/kirito/tema.png);
+    --bg-temaaura: url(../img/temas/aura\ pop/tema.png);
 }
 
 /* ----tema ocean deep digital---- */
 
 /* ------------*/
-/* tema gs pop  */
+/* tema aura  */
 /* ------------*/
-[data-theme="gs-pop"] {
+[data-theme="aura"] {
 
 
     /* geral */
@@ -206,7 +210,7 @@ legend {
 
     /* texto */
     --cor-texto: #9a1a4d;
-    --familia-fonte: 'popgs';
+    --familia-fonte: 'aura';
 
     /* fundo */
     --cor-fundo: white;
@@ -232,44 +236,43 @@ legend {
     /* -----background-image-----*/
 
     /* MODULOS */
-    --MOD-bg-proximo: url(../img/temas/gs\ pop/proximo.png);
-    --MOD-bg-anterior: url(../img/temas/gs\ pop/anterior.png);
-    --MOD-bg-verMais: url(../img/temas/gs\ pop/ver-mais.png);
+    --MOD-bg-proximo: url(../img/temas/aura\ pop/proximo.png);
+    --MOD-bg-anterior: url(../img/temas/aura\ pop/anterior.png);
+    --MOD-bg-verMais: url(../img/temas/aura\ pop/ver-mais.png);
 
     /* feedback.html */
-    --bg-seta: url(../img/temas/gs\ pop/seta.png);
-    --bg-seletor: url(../img/temas/gs\ pop/seletor.png);
-    --bg-check: url(../img/temas/gs\ pop/check.png);
-    --bg-radio: url(../img/temas/gs\ pop/radio.png);
+    --bg-seta: url(../img/temas/aura\ pop/seta.png);
+    --bg-seletor: url(../img/temas/aura\ pop/seletor.png);
+    --bg-check: url(../img/temas/aura\ pop/check.png);
+    --bg-radio: url(../img/temas/aura\ pop/radio.png);
 
     /* musica.html */
-    --bg-pause: url(../img/temas/gs\ pop/pause.png);
-    --bg-play: url(../img/temas/gs\ pop/play.png);
-    --bg-playlist2: url(../img/temas/gs\ pop/playlist\ icon2.png);
+    --bg-pause: url(../img/temas/aura\ pop/pause.png);
+    --bg-play: url(../img/temas/aura\ pop/play.png);
+    --bg-playlist2: url(../img/temas/aura\ pop/playlist\ icon2.png);
 
     /* menu */
-    --bg-home: url(../img/temas/gs\ pop/home.png);
-    --bg-resenhas: url(../img/temas/gs\ pop/resenhas.png);
-    --bg-videos: url(../img/temas/gs\ pop/videos.png);
-    --bg-tabelas: url(../img/temas/gs\ pop/tabelas.png);
-    --bg-imagens: url(../img/temas/gs\ pop/galeria.png);
-    --bg-mapa: url(../img/temas/gs\ pop/mapa.png);
-    --bg-feedback: url(../img/temas/gs\ pop/feedback.png);
-    --bg-musica: url(../img/temas/gs\ pop/musica.png);
-    --bg-expandir: url(../img/temas/gs\ pop/expandir.png);
-    --bg-encolher: url(../img/temas/gs\ pop/encolher.png);
-    --bg-tema: url(../img/temas/gs\ pop/tema.png);
-    --bg-temags: url(../img/temas/gs\ pop/tema.png);
-    --bg-temakirito: url(../img/temas/kirito/tema.png);
+    --bg-home: url(../img/temas/aura\ pop/home.png);
+    --bg-resenhas: url(../img/temas/aura\ pop/resenhas.png);
+    --bg-videos: url(../img/temas/aura\ pop/videos.png);
+    --bg-tabelas: url(../img/temas/aura\ pop/tabelas.png);
+    --bg-imagens: url(../img/temas/aura\ pop/galeria.png);
+    --bg-mapa: url(../img/temas/aura\ pop/mapa.png);
+    --bg-feedback: url(../img/temas/aura\ pop/feedback.png);
+    --bg-musica: url(../img/temas/aura\ pop/musica.png);
+    --bg-expandir: url(../img/temas/aura\ pop/expandir.png);
+    --bg-encolher: url(../img/temas/aura\ pop/encolher.png);
+    --bg-tema: url(../img/temas/aura\ pop/tema.png);
+    --bg-temaaura: url(../img/temas/aura\ pop/tema.png);
 
     /* -------paleta-------- */
-    /* --cor-gs-amarelo: #e1e108;
-    --cor-gs-vermelho: #871744;
-    --cor-gs-vermelho-claro: #9a1a4d;
-    --cor-gs-vermelho-escuro: rgb(87, 17, 45);
-    --cor-gs-vermelho-claro-transparente: rgba(154, 26, 77, 0.76);
-    --cor-gs-vermelho-escuro-transparente: rgba(87, 17, 45, 0.76);
-    --cor-gs-cinza: rgb(122, 122, 122);
+    /* --cor-aura-amarelo: #e1e108;
+    --cor-aura-vermelho: #871744;
+    --cor-aura-vermelho-claro: #9a1a4d;
+    --cor-aura-vermelho-escuro: rgb(87, 17, 45);
+    --cor-aura-vermelho-claro-transparente: rgba(154, 26, 77, 0.76);
+    --cor-aura-vermelho-escuro-transparente: rgba(87, 17, 45, 0.76);
+    --cor-aura-cinza: rgb(122, 122, 122);
     --branco-transparente: rgba(255, 255, 255, 0.8);
     --branco-transparente1: rgba(255, 255, 255, 0.4);
     --branco-transparente2: rgba(255, 255, 255, 0.959);
@@ -283,18 +286,8 @@ legend {
     --sombraTexto: -3px 18px 15px -19px rgba(0, 0, 0, 0.25); */
 }
 
-/*----tema gs pop----*/
+/*----tema aura----*/
 
-/* ------------*/
-/* tema kirito */
-/* ------------*/
-:root {
-    --cor-kirito: #316ced;
-    --borda-k: 5px white solid;
-    --borda-k2: 5px #316ced solid;
-}
-
-/* ----tema kirito---- */
 /*----TEMAS----*/
 /*----variaveis----*/
 
@@ -404,7 +397,7 @@ legend {
 
 /* >> SLIDER AUTOR AUITOMATICO << */
 
-/* >> CONTROLES GS << */
+/* >> CONTROLES << */
 .MOD-controle {
     height: 50px;
     width: 50px;
@@ -424,7 +417,7 @@ legend {
     float: left;
 }
 
-/* >> CONTROLES GS << */
+/* >> CONTROLES << */
 
 /* >> CABEÇALHO DE SEÇÃO << */
 .MOD-container-cabecalho-secao {
@@ -481,11 +474,11 @@ header {
     left: 50%;
     transform: translate(-50%, -0%);
     z-index: 3;
-    border: var(--borda-elemento2);
+    border-bottom: var(--borda-elemento2);
     background-color: var(--cor-elemento2);
     border-bottom-left-radius: var(--redondez);
     border-bottom-right-radius: var(--redondez);
-    transition: top 0.3s ease;
+    transition: var(--transicao1);
 }
 
 .MOD-nav-header {
@@ -497,8 +490,8 @@ header {
     color: var(--cor-geral);
     border-radius: var(--redondez);
     margin: 0 auto;
-    border: var(--borda-elemento2);
-    background-color: var(--cor-elemento2);
+    border-bottom: var(--borda-elemento1);
+    background-color: var(--cor-elemento1);
 }
 
 .MOD-nav-superior a {
@@ -600,9 +593,6 @@ header {
     top: 40px;
 }
 
-
-
-
 /* >> SLIDER DEPOIMENTOS << */
 /*------------>> MODULOS 🧩<<-------------*/
 /*----------> CONFIGURAÇÕES INICIAIS ⚙️🌣 <-----------*/
@@ -656,16 +646,20 @@ header {
 /*------------>> MENU LATERAL 🈁<<-------------*/
 /*---------------------------------------------*/
 
+.menu-horizontal {
+    display: none;
+}
+
 .menu-lateral {
     position: fixed;
     left: 10px;
     top: 5px;
     height: 98%;
-    width: var(--width-menu-lateral);
-    box-sizing: border-box;
+    width: 80px;
     transition: 0.5s;
     display: flex;
     flex-direction: column;
+    transition: var(--transicao1);
 }
 
 .expandir-btn {
@@ -706,7 +700,8 @@ header {
     background-image: var(--bg-encolher);
 }
 
-.menu2 {
+.menu2,
+.menu2-h {
     height: 90%;
     width: 100%;
     background-color: var(--cor-menu);
@@ -715,25 +710,30 @@ header {
     text-align: left;
     border-radius: 10px;
     box-sizing: border-box;
-    transition: 0.5s;
+    transition: var(--transicao1);
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
     margin-bottom: 10px;
     overflow: hidden;
+}
+
+.menu2-h {
+    display: none;
 }
 
 .menu2-container-navegacao {
     width: 500px;
 }
 
-.menu2-opcao {
+.menu2-opcao,
+.menu2-opcao-h {
     height: max-content;
     width: 100%;
     margin-top: 20px;
 }
 
-.menu2 a {
+.menu2 a,
+.menu2-h a {
     height: 50px;
     width: 50px;
     display: inline-block;
@@ -749,6 +749,7 @@ header {
     border-radius: 50%;
     background-color: var(--cor-elemento2);
     border: var(--borda-elemento2);
+    cursor: pointer;
 }
 
 a[href="http://localhost/Portal/"]>.icone-menu {
@@ -783,14 +784,16 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
     background-image: var(--bg-logout);
 }
 
-a.link-ajax:not(:nth-of-type) .menu2 span {
+.menu2 span,
+.menu2-h span {
     height: 100%;
     position: relative;
-    top: -10px;
-    font-size: 30px;
+    top: -15px;
+    font-size: 25px;
     color: var(--cor-geral);
     transition: 0.5s;
-    font-family: 'popgs';
+    font-family: var(--familia-fonte);
+    font-weight: bolder;
 }
 
 .menu3 {
@@ -803,7 +806,7 @@ a.link-ajax:not(:nth-of-type) .menu2 span {
 
 .temas-btn {
     width: 100%;
-    height: calc(100%/3);
+    height: calc(100%/2);
     border-radius: 10px;
     background-repeat: no-repeat;
     background-size: 50px;
@@ -820,27 +823,20 @@ a.link-ajax:not(:nth-of-type) .menu2 span {
     z-index: 5;
 }
 
-.tema-genshin {
-    background-image: var(--bg-temags);
+.tema-aura {
+    background-image: var(--bg-temaaura);
     z-index: 5;
-}
-
-.tema-kirito {
-    background-image: var(--bg-temakirito);
-    z-index: 5;
-
 }
 
 /*------------>> MENU LATERAL 🈁<<-------------*/
 
 /*--------------------------------------------------*/
 /*------------>> pedidos de amizade ⤵<<-------------*/
-/*---------------------------------------------------*/
+/*--------------------------------------------------*/
 
 .friends-request-feed {
-    width: 15%;
-    height: max-content;
-    margin-left: 2%;
+    width: 275px;
+    height: 99vh;
     padding: 30px;
     border: var(--borda-elemento2);
     border-radius: var(--redondez);
@@ -849,9 +845,8 @@ a.link-ajax:not(:nth-of-type) .menu2 span {
     box-shadow: var(--brilho-corpo);
     border-radius: 10px;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    max-height: 90vh;
+    top: 5px;
+    right: 10px;
     overflow: hidden;
 }
 
@@ -917,11 +912,6 @@ a.link-ajax:not(:nth-of-type) .menu2 span {
     transition: var(--transicao1);
 }
 
-main.inicio-main {
-    padding-top: 20px;
-    padding-bottom: 6px;
-}
-
 .container-central {
     max-width: var(--width-corpo);
     height: 100%;
@@ -985,13 +975,13 @@ main.inicio-main {
 /*------------->> MEDIA QUERIES <<-------------*/
 /*---------------------------------------------*/
 
-/*---------------------------------------------*/
-/*--------------- tela > 1080p ----------------*/
-/*---------------------------------------------*/
+/*-------------------------------*/
+/*-------- tela > 1990p ---------*/
+/*-------------------------------*/
 
-/*---------------------------------------------*/
-/*---------------->> LOGIN <<------------------*/
-/*---------------------------------------------*/
+/*---------------------*/
+/*----->> LOGIN <------*/
+/*---------------------*/
 
 @media screen and (min-width: 1921px) {
 
@@ -1008,18 +998,18 @@ main.inicio-main {
 
 }
 
-/*---------------->> LOGIN <<------------------*/
-/*--------------- tela > 1080p ----------------*/
+/*---->> LOGIN <<-----*/
+/*--- tela > 1990p ---*/
 
-/*---------------------------------------------*/
-/*---------------- tela 952px -----------------*/
-/*---------------------------------------------*/
+/*-------------------------------*/
+/*---------- tela < 1996px ------*/
+/*-------------------------------*/
 
-/*---------------------------------------------*/
-/*---------------->> LOGIN <<------------------*/
-/*---------------------------------------------*/
+/*---------------------*/
+/*---->> LOGIN <<------*/
+/*---------------------*/
 
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 1996px) {
     .cabecalho {
         text-align: center;
         height: auto;
@@ -1061,76 +1051,171 @@ main.inicio-main {
     .container-texto p {
         padding: 0 4%;
     }
-}
 
-/*----------- tela 773px -----------*/
 
-/*---------------------------------------------*/
-/*---------------->> LOGIN <<------------------*/
-/*---------------------------------------------*/
+    /*---->> LOGIN <<------*/
 
-@media screen and (max-width: 773px) {
-    .cabecalho {
-        text-align: center;
-        height: auto;
-        padding: 10px 0;
+    /*---------------------*/
+    /*---->> HEADER <<-----*/
+    /*---------------------*/
+
+    :root {
+        --nav-top-show: 78px;
     }
 
-    .cabecalho a {
-        margin: 0;
+    .boas-vindas {
+        top: 180px;
     }
 
-    .cabecalho img {
-        height: 70px;
+    .container-central {
+        padding-top: 100px;
     }
 
-    .banner {
+    /* .container-central__conteudos {} */
+
+    .menu-lateral {
+        display: none;
+    }
+
+    .menu-horizontal {
+        display: block;
+        height: 78px;
         width: 100%;
-        height: auto;
-        padding: 0px 2%;
-        text-align: center;
-    }
-
-    .formulario {
-        text-align: left;
-        width: 90%;
-        max-width: 500px;
-        height: auto;
+        position: fixed;
+        z-index: 999;
+        transition: var(--transicao1);
         top: 0;
-        float: none;
-        display: inline-block;
-        margin-bottom: 30px;
     }
 
-    .lista-container {
-        float: none;
-        width: 90%;
-        max-width: 500px;
-        height: auto;
-        padding: 30px 0;
-        display: inline-block;
-        margin: 30px 0px;
-    }
-
-    .formulario h2 {
-        text-align: center;
-    }
-
-    .container-texto p {
-        padding: 0 4%;
-    }
-
-    .container-centro-unico {
-        padding: 70px 15px;
-        float: none;
-        display: inline-block;
+    .menu2-h {
+        display: block;
+        height: 100%;
         width: 100%;
-        max-width: 600px;
+        overflow: auto;
+        margin-bottom: 0px;
+        position: relative;
+        scrollbar-width: thin;
+        scrollbar-color: var(--cor-elemento1) transparent;
+        background-color: var(--cor-menu);
+        box-shadow: var(--brilho-menu);
     }
 
-    .container-centro-unico p {
-        padding: 0 4%;
+    .menu2-container-navegacao-h {
+        height: 100%;
+        width: 2000px;
+        position: absolute;
+    }
+
+    .menu2-opcao-h {
+        width: max-content;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .icone-solicitacoes-h {
+        display: inline-block;
+    }
+
+    .icone-temas-h {
+        display: inline-block;
+    }
+
+
+    .friends-request-feed {
+        display: none;
     }
 }
+
+/*---->> HEADER <<------*/
+/*----------- tela < 1990px -----------*/
+
+/*---------------------------------------*/
+/*---------- tela < 1350px --------------*/
+/*---------------------------------------*/
+
+
+
+/*---------- tela < 1350px --------------*/
+
+/*---------------------------------------*/
+/*---------- tela < 1164px --------------*/
+/*---------------------------------------*/
+
+@media screen and (max-width: 1164px) {
+
+    .container-colunas__coluna:nth-of-type(7) {
+        display: none;
+    }
+
+}
+
+/*---------- tela < 1164px --------------*/
+
+/*---------------------------------------*/
+/*---------- tela < 993px --------------*/
+/*---------------------------------------*/
+
+@media screen and (max-width: 1164px) {
+
+    .container-colunas__coluna:nth-of-type(5) {
+        display: none;
+    }
+
+    .container-colunas__coluna:nth-of-type(6) {
+        display: none;
+    }
+
+}
+
+/*---------- tela < 993px --------------*/
+
+/*---------------------------------------*/
+/*---------- tela < 818px --------------*/
+/*---------------------------------------*/
+
+@media screen and (max-width: 818px) {
+
+    .container-colunas__coluna:nth-of-type(4) {
+        display: none;
+    }
+
+}
+
+/*---------- tela < 818px --------------*/
+
+/*---------------------------------------*/
+/*---------- tela < 1000px --------------*/
+/*---------------------------------------*/
+@media screen and (max-width: 1000px) {
+
+    .container-colunas__coluna:nth-of-type(1) {
+        /* grid-row: 2 / span 5; */
+        grid-column: inherit;
+        grid-row: inherit;
+    }
+
+    .container-colunas__coluna:nth-of-type(2) {
+        /* grid-column: 2 / 4;
+        grid-row: 1 / span 3; */
+        grid-column: inherit;
+        grid-row: inherit;
+    }
+
+    .container-colunas__coluna:nth-of-type(3) {
+        /* grid-column: 2 / 4;
+        grid-row: 4 / span 2; */
+        grid-column: inherit;
+        grid-row: inherit;
+    }
+
+    .container-colunas__coluna:nth-of-type(4) {
+        /* grid-row: 1 / span 5; */
+        grid-column: inherit;
+        grid-row: inherit;
+    }
+
+}
+
+/*---------- tela < 1050px --------------*/
 
 /*------------->> MEDIA QUERIES <<-------------*/

@@ -36,84 +36,39 @@
     <div class="containeres">
         <div class="container1">
             <h2>texto texto texto texto texto!</h2>
-            <p>Genshin impact foi um divisor de aguas na minha vida e acredito que no mundo dos jogos
-                também. Nunca
-                havia sido feito algo como ele. Acredito que como ocorre pra muitas obras, meio que
-                existe
-                dentro de
-                cada jogador um sentimento intrinseco desenvolvido ao experienciar alguns momentos
-                marcantes
-                em
-                videogames, a vontade de experimentar algo que que faltou ali (não por incompetencia mas
-                pelo
-                conceito
-                estar a frente do seu tempo e a tecnologia não permitir que esse conceito seja
-                alcançado,
-                por
-                exemplo),
-                algo maior, algo que nunca viu e que aquele momento desperotu isso nele, as vezes até
-                sem
-                ele saber.
-                Bom, acredito que em Genshin Impact foi a vontade de experimentar um jogo que te faça
-                sentir
-                totalmente
-                dentro de um anime em seus minimos detalhes, um universao criado para fascinar um fã dos
-                desenhos
-                japoneses. Toda aquela magia, beleza, delicadeza, os pilares do mundo dos animes
-                encaixado
-                num jogo,
-                e
-                por incrivel que pareça: tudo isso de graça! A arapuca estava montada para os jovens fãs
-                da
-                cultura
-                pop
-                japonesa e nós caímos de braços abertos, mergulhados na proposta de nos fazer entrar no
-                mundo mágico
-                e
-                fantasioso de Genshin Impact. Foi satisfatório, foi Prazeroso, foi recompensador, foi
-                extasiante.
+            <p>Aliquam ullamcorper, erat a euismod porta, arcu dolor convallis mi, aliquet efficitur velit massa at
+                nulla. Curabitur ullamcorper erat lacus, vel fermentum risus egestas ut. Etiam efficitur at dolor nec
+                rutrum. Mauris sit amet nibh at dui vehicula maximus. Interdum et malesuada fames ac ante ipsum primis
+                in faucibus. Aenean porta vulputate nunc non dictum. Maecenas dictum sit amet augue vitae ornare. Duis
+                commodo lorem quis leo dignissim, ut malesuada leo imperdiet. Morbi consectetur sem est, a tempor diam
+                elementum id. Mauris nec ex rutrum, semper metus in, pretium quam. Praesent pulvinar in sapien eget
+                efficitur. Praesent convallis dui et nibh bibendum, in malesuada ex pharetra. Nam viverra quam a leo
+                convallis ullamcorper. Nullam et bibendum dolor. Mauris semper malesuada ultrices. Ut mauris est, mollis
+                quis vestibulum sit amet, elementum eget sem.
             </p>
         </div><!--container-->
         <h2>Melhor conteudo da internet está aqui</h2>
         <div class="container2">
             <div class="container2-boxes">
                 <h2>Mais um texto aleatorio</h2>
-                <p>Genshin impact foi um divisor de aguas na minha vida e acredito que no mundo dos
-                    jogos
-                    também.
-                    Nunca
-                    havia sido feito algo como ele. Acredito que como ocorre pra muitas obras, meio que
-                    existe
-                    dentro de
-                    cada jogador um sentimento intrinseco desenvolvido ao experienciar alguns momentos
-                    marcantes em
-                    videogames</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
+                    tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque in
+                    luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum ex,
+                    malesuada vestibulum augue.</p>
             </div><!--container-->
             <div class="container2-boxes">
                 <h2>Mais um texto aleatorio</h2>
-                <p>Genshin impact foi um divisor de aguas na minha vida e acredito que no mundo dos
-                    jogos
-                    também.
-                    Nunca
-                    havia sido feito algo como ele. Acredito que como ocorre pra muitas obras, meio que
-                    existe
-                    dentro de
-                    cada jogador um sentimento intrinseco desenvolvido ao experienciar alguns momentos
-                    marcantes em
-                    videogames</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
+                    tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque in
+                    luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum ex,
+                    malesuada vestibulum augue.</p>
             </div><!--container-->
             <div class="container2-boxes">
                 <h2>Mais um texto aleatorio</h2>
-                <p>Genshin impact foi um divisor de aguas na minha vida e acredito que no mundo dos
-                    jogos
-                    também.
-                    Nunca
-                    havia sido feito algo como ele. Acredito que como ocorre pra muitas obras, meio que
-                    existe
-                    dentro de
-                    cada jogador um sentimento intrinseco desenvolvido ao experienciar alguns momentos
-                    marcantes em
-                    videogames</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
+                    tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque in
+                    luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum ex,
+                    malesuada vestibulum augue.</p>
             </div><!--container-->
         </div><!--container-->
     </div>
