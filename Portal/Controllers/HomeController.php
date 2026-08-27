@@ -39,11 +39,24 @@ class HomeController
                 \Portal\Utilidades::alerta('Não permitimos posts vazios :(');
                 \Portal\Utilidades::redirect(INCLUDE_PATH);
             }
-            \Portal\Models\HomeModel::postFeed($_POST['post_content']);
+
+            $tipo = $_POST['tipo_post'];
+            $nomeArquivo = '';
+
+            if (isset($_FILES['arquivo_midia']) && $_FILES['arquivo_midia']['error'] === UPLOAD_ERR_OK) {
+                
+                $nomeArquivo = time() . '_' . $_FILES['arquivo_midia']['name'];
+                $caminhoDestino = 'C:/xampp/htdocs/Portal/uploads/' . $nomeArquivo;
+
+                move_uploaded_file($_FILES['arquivo_midia']['tmp_name'], $caminhoDestino);
+            }
+
+            \Portal\Models\HomeModel::postFeed($_POST['post_content'], $tipo, $nomeArquivo);
+
             \Portal\Utilidades::alerta('Post feito com sucesso!');
             \Portal\Utilidades::redirect(INCLUDE_PATH);
         }
-
+        
         // renderiza o Feed somente se estiver logado
         \Portal\Views\MainView::render('feed');
     }

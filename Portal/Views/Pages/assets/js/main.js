@@ -39,7 +39,7 @@ function tratarRota(rota) {
     }
 }
 
-// execução no F5 (Carregamento inicial)
+
 $(document).ready(function () {
     let urlAtual = window.location.href;
     let rotaInicial = urlAtual.split('/').filter(Boolean).pop();
@@ -47,7 +47,6 @@ $(document).ready(function () {
     tratarRota(rotaInicial);
 });
 
-// execução nos cliques dinâmicos
 $(document).on('click', 'a.link-ajax', function (e) {
     e.preventDefault();
 

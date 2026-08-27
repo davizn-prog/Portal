@@ -18,14 +18,11 @@
 						\Portal\Utilidades::redirect(INCLUDE_PATH.'perfil');
 					}
 
-					
-
 					if($senha != ''){
 						$senha = \Portal\Bcrypt::hash($senha);
 						$atualizar = $pdo->prepare("UPDATE usuarios SET nome = ?, senha = ? WHERE id = ?");
 						$atualizar->execute(array($nome,$senha,$_SESSION['id']));
 						$_SESSION['nome'] = $nome;
-						
 						
 					}else{
 						
@@ -33,10 +30,7 @@
 						$atualizar->execute(array($nome,$_SESSION['id']));
 						$_SESSION['nome'] = $nome;
 						
-						
 					}
-
-					
 
 					if($_FILES['file']['tmp_name'] != ''){
 						$file = $_FILES['file'];
@@ -52,9 +46,8 @@
 								$atualizaImagem->execute(array($uniqid,$_SESSION['id']));
 								$_SESSION['img'] = $uniqid;
 								move_uploaded_file($file['tmp_name'],'C:\xampp\htdocs\Portal/uploads/'.$uniqid);
-								\Portal\Utilidades::alerta('Seu perfil foi atualizado junto com a foto!');
+								// \Portal\Utilidades::alerta('Seu perfil foi atualizado junto com a foto!');
 								\Portal\Utilidades::redirect(INCLUDE_PATH.'perfil');
-
 								
 							}else{
 								\Portal\Utilidades::alerta('Erro ao processar seu arquivo.');
@@ -66,22 +59,14 @@
 						}
 					}
 
-					\Portal\Utilidades::alerta('Seu perfil foi atualizado com sucesso!');
+					// \Portal\Utilidades::alerta('Seu perfil foi atualizado com sucesso!');
 					\Portal\Utilidades::redirect(INCLUDE_PATH.'perfil');
-
-
-
-
 				}
-
 
 				\Portal\Views\MainView::render('perfil');
 			}else{
 				\Portal\Utilidades::redirect(INCLUDE_PATH);
 			}
-			
 		}
-
 	}
-
 ?>

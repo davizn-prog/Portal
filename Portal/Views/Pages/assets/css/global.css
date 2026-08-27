@@ -10,6 +10,10 @@
     scrollbar-color: var(--cor-geral) var(--cor-fundo);
 }
 
+/* input[type="file"]{
+    visibility: hidden;
+} */
+
 html,
 body {
     height: 100%;
@@ -465,10 +469,9 @@ header {
 }
 
 .MOD-nav-superior {
-    height: 70px;
+    height: max-content;
     width: var(--width-corpo);
     text-align: center;
-    display: none;
     position: fixed;
     top: 0%;
     left: 50%;
@@ -479,11 +482,12 @@ header {
     border-bottom-left-radius: var(--redondez);
     border-bottom-right-radius: var(--redondez);
     transition: var(--transicao1);
+    display: none;
 }
 
 .MOD-nav-header {
     width: max-content;
-    height: 80px;
+    height: max-content;
     transition: var(--transicao1);
     text-align: center;
     z-index: 3;
@@ -505,6 +509,7 @@ header {
 .MOD-menu-navegacao ul {
     text-align: center;
     width: 100%;
+    transition: var(--transicao1);
 }
 
 .MOD-menu-navegacao li {
@@ -512,6 +517,7 @@ header {
     margin: 25px 20px;
     font-size: 25px;
     font-weight: bolder;
+    transition: var(--transicao1);
 }
 
 /* >> MENU SCROLL << */
@@ -715,14 +721,17 @@ header {
     flex-direction: column;
     margin-bottom: 10px;
     overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-elemento1) transparent;
+}
+
+.menu2-container-navegacao{
+    width: 500px;
 }
 
 .menu2-h {
     display: none;
-}
-
-.menu2-container-navegacao {
-    width: 500px;
 }
 
 .menu2-opcao,
@@ -760,6 +769,10 @@ a[href="http://localhost/Portal/perfil"]>.icone-menu {
     background-image: var(--bg-perfil);
 }
 
+a[href="http://localhost/Portal/perfil"]>.icone-menu {
+    background-image: var(--bg-perfil);
+}
+
 a[href="http://localhost/Portal/comunidade"]>.icone-menu {
     background-image: var(--bg-comunidade);
 }
@@ -778,6 +791,10 @@ a[href="http://localhost/Portal/feedback"]>.icone-menu {
 
 a[href="http://localhost/Portal/musica"]>.icone-menu {
     background-image: var(--bg-musica);
+}
+
+a[href="http://localhost/Portal/galeria"]>.icone-menu {
+    background-image: var(--bg-imagens);
 }
 
 a[href="http://localhost/Portal/?loggout"]>.icone-menu {
@@ -900,6 +917,7 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
 /*--------------------------------------*/
 
 .boas-vindas {
+    width: max-content;
     position: fixed;
     top: 80px;
     left: 50%;
@@ -1071,8 +1089,6 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
         padding-top: 100px;
     }
 
-    /* .container-central__conteudos {} */
-
     .menu-lateral {
         display: none;
     }
@@ -1092,18 +1108,24 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
         height: 100%;
         width: 100%;
         overflow: auto;
-        margin-bottom: 0px;
         position: relative;
         scrollbar-width: thin;
         scrollbar-color: var(--cor-elemento1) transparent;
         background-color: var(--cor-menu);
         box-shadow: var(--brilho-menu);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu2-h span{
+        display: none;
     }
 
     .menu2-container-navegacao-h {
         height: 100%;
-        width: 2000px;
         position: absolute;
+        width: max-content;
     }
 
     .menu2-opcao-h {
@@ -1130,10 +1152,121 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
 /*----------- tela < 1990px -----------*/
 
 /*---------------------------------------*/
-/*---------- tela < 1350px --------------*/
+/*---------- tela < 1360px --------------*/
 /*---------------------------------------*/
 
+@media screen and (max-width: 1360px) {
 
+    :root{
+        --nav-top-show:55px;
+    }
+
+    .menu-horizontal{
+        height: 62px;
+        width: 100%;
+    }
+
+    .menu2-h {
+        display: flex;
+        overflow-y: hidden;
+    }
+
+    .menu2-container-navegacao-h {
+        width: max-content;
+    }
+
+    .menu2-opcao-h span {
+        display: none;
+    }
+
+    .icone-menu {
+        height: 80%;
+        width: 80%;
+    }
+
+    .MOD-nav-superior {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        opacity: 0  ;
+    }
+
+    .MOD-nav-superior ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .MOD-nav-superior li {
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        font-size: clamp(17px, 2.1vw, 22px);
+        margin: 0 1vw;
+    }
+
+    .MOD-nav-superior {
+        height: clamp(60px, 5vw, 60px);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Centraliza a UL no container */
+        padding: 0 10px;
+    }
+
+    .MOD-nav-superior ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* <<< AQUI: Centraliza os LI dentro da UL */
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        /* Remove preenchimentos padrão de lista */
+    }
+
+    .MOD-nav-superior li {
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        font-size: clamp(17px, 2.1vw, 22px);
+        margin: 0 1vw;
+    }
+
+    .MOD-nav-header {
+        height: clamp(60px, 5vw, 60px);
+        width: max-content;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .MOD-nav-header ul {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .MOD-nav-header li {
+
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        font-size: clamp(17px, 2.1vw, 22px);
+        margin: 0 1vw;
+    }
+
+}
 
 /*---------- tela < 1350px --------------*/
 
@@ -1157,13 +1290,21 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
 
 @media screen and (max-width: 1164px) {
 
-    .container-colunas__coluna:nth-of-type(5) {
-        display: none;
+    .menu2-h {
+        display: block;
     }
 
-    .container-colunas__coluna:nth-of-type(6) {
-        display: none;
-    }
+}
+
+/*---------- tela < 993px --------------*/
+
+/*---------------------------------------*/
+/*---------- tela < 850px --------------*/
+/*---------------------------------------*/
+
+@media screen and (max-width: 850px) {
+
+
 
 }
 

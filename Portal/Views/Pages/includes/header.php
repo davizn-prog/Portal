@@ -17,9 +17,10 @@
 </head>
 
 <body>
-    <?php if (isset($filename) && ($filename === 'feed' || $filename === 'home' || $filename === '')): ?>
-        <h1 class="boas-vindas" id="boasVindas">Bem-vindo, <?php echo $_SESSION['nome']; ?></h1>
-    <?php endif; ?>
+    <h1 class="boas-vindas" id="boasVindas"
+        style="<?php echo (isset($filename) && ($filename === 'feed' || $filename === 'home' || $filename === '')) ? '' : 'display: none;'; ?>">
+        Bem-vindo, <?php echo $_SESSION['nome']; ?>
+    </h1>
 
     <!-- pedidos de amizade -->
     <div class="friends-request-feed">
@@ -50,7 +51,6 @@
         </ul><!--lista-->
     </nav><!--menu que vai ser ativao ao descer pra baixo do menu header-->
     <!-- MODULO - menu superior-->
-
     <!-- menu horizontal-->
     <nav class="menu-horizontal">
         <div class="menu2-h">
@@ -101,6 +101,12 @@
                     <a>
                         <div class="icone-menu"></div>
                     </a>
+                    <span>Galeria</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a>
+                        <div class="icone-menu"></div>
+                    </a>
                     <span>Solicitações</span>
                 </div><!--container da opção-->
                 <div class="menu2-opcao-h">
@@ -117,7 +123,6 @@
                 </div><!--container da opção-->
             </div>
         </div><!-- o bloco do menu com links pras paginas -->
-        <!-- menu horizontal -->
     </nav><!--menu horizontal-->
 
     <!--menu leteral-->
@@ -140,7 +145,8 @@
                 </div><!--container da opção-->
                 <div class="menu2-opcao">
                     <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>perfil">
-                        <div class="icone-menu"></div>
+                        <img class="icone-menu" src="<?php echo INCLUDE_PATH; ?>uploads/<?php echo $_SESSION['img']; ?>"
+                            alt="">
                     </a>
                     <span>Perfil</span>
                 </div><!--container da opção-->
@@ -167,6 +173,12 @@
                         <div class="icone-menu"></div>
                     </a>
                     <span>Musica</span>
+                </div><!--container da opção-->
+                <div class="menu2-opcao-h">
+                    <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>galeria">
+                        <div class="icone-menu"></div>
+                    </a>
+                    <span>Galeria</span>
                 </div><!--container da opção-->
                 <div class="menu2-opcao">
                     <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>feedback">

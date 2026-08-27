@@ -1,0 +1,32 @@
+/*-------------------------------------------*/
+/*------------>> GALERIA.HTML <<-------------*/
+/*-------------------------------------------*/
+
+.container-fig {
+    margin: 0 auto;
+
+}
+
+.img-wraper {
+    width: 33.3%;
+    padding-top: calc(33.3% / 1.6);
+    /*esse calc diminuiu o tamanho da altura pelo resultado desse calculo, deixando do tamanho de uma imagem 16:9*/
+    padding-top: 33.3%;
+    float: left;
+    position: relative;
+    margin: 0 auto;
+}
+
+.img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: var(--borda-elemento2);
+    border-radius: var(--redondez);
+    box-shadow: var(--pelicula);
+}
+
+/*------------>> GALERIA.HTML <<-------------*/

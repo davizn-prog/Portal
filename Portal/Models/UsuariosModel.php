@@ -4,7 +4,6 @@
 
 	class UsuariosModel{
 
-
 		public static function emailExists($email){
 			$pdo = \Portal\MySql::connect();
 			$verificar = $pdo->prepare("SELECT email FROM usuarios WHERE email = ?");
@@ -30,8 +29,6 @@
 
 		}
 
-
-
 		public static function solicitarAmizade($idPara){
 
 			$pdo = \Portal\MySql::connect();
@@ -52,10 +49,8 @@
 				}
 			}
 
-
 			return true;
 		}
-
 
 		public static function listarAmizadesPendentes(){
 
@@ -94,7 +89,6 @@
 			}
 		}
 
-
 		public static function atualizarPedidoAmizade($enviou,$status){
 			$pdo = \Portal\MySql::connect();
 
@@ -108,7 +102,6 @@
 
 				$aceitarPedido = $pdo->prepare("UPDATE amizades SET status = 1 WHERE enviou = ? AND recebeu = ?");
 
-
 				$aceitarPedido->execute(array($enviou,$_SESSION['id']));
 
 				if($aceitarPedido->rowCount() == 1){
@@ -116,10 +109,7 @@
 				}else{
 					return false;
 				}
-
-
 			}
-
 		}
 
 		public static function listarAmigos(){
@@ -147,12 +137,6 @@
 			}
 
 			return $listaAmigos;
-
-
 		}
-
-
-
 	}
-
 ?>

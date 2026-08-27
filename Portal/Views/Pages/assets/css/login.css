@@ -1,12 +1,17 @@
 @import url(global.css);
 
+:root{
+    --altura-efeito: 400;
+}
+
 /*---------------------------------------*/
 /*-------->> LOGIN.HTML <<---------------*/
 /*---------------------------------------*/
 
 html {
     background-color: var(--cor-fundo);
-    height: 178vh;
+    padding-top: 95vh;
+    height: 180vh;
 }
 
 /*inicio*/
@@ -44,7 +49,8 @@ html {
     margin: 30px 0px;
 }
 
-.input-container input[type='text'],.input-container input[type='password'] {
+.input-container input[type='text'],
+.input-container input[type='password'] {
     outline: none;
     width: 100%;
     height: 56px;
@@ -94,39 +100,108 @@ html {
 
 /*secao2*/
 
-.containeres{
+.containeres {
     height: max-content;
-    width: var(--width-corpo);
-    position: relative;
+    width: 90%;
+    max-width: var(--width-corpo);
+    /* position: relative;
     top: 125vh;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     border-radius: var(--redondez);
     border: var(--borda-elemento1);
     box-shadow: var(--brilho-corpo);
     transition: var(--transicao1);
     padding: 100px;
     text-align: center;
-    margin-bottom: 200px;
+    margin: 0 auto;
 }
 
-.containeres h2{
+.containeres h2 {
     margin: 20px 0;
 }
 
-.container1 p{
+.container1 p {
     text-align: justify;
+    transition: var(--transicao1);
 }
 
-.container2{
+.container2 {
+    margin-top: 100px;
+    text-align: center;
+    transition: var(--transicao1);
+}
+
+.container2-container-boxes {
     display: flex;
-    text-align: justify;
 }
 
-.container2-boxes{
+.container2-box {
     margin: 0 20px;
 }
 
+/*-------------->> LOGIN <<---------------*/
+
+/*---------------------------------------*/
+/*---------- tela < 1335px ---------------*/
+/*---------------------------------------*/
+
+@media screen and (max-width: 1335px) {
+
+    .container2-container-boxes {
+        display: block;
+    }
+
+}
+
+/*---------- tela < 818px --------------*/
+
+/*---------------------------------------*/
+/*---------- tela < 860px ---------------*/
+/*---------------------------------------*/
+
+@media screen and (max-width: 860px) {
+
+    .container1 p {
+        text-align: center;
+    }
+
+    .containeres {
+        width: 100%;
+        max-width: 100%;
+        padding: 40px;
+    }
 
 
-/*-------------->> LOGIN.HTML <<---------------*/
+
+}
+
+/*---------- tela < 818px --------------*/
+
+/*---------------------------------------*/
+/*---------- tela < 1335px ---------------*/
+/*---------------------------------------*/
+
+@media screen and (max-width: 1335px) {
+
+    .container2-container-boxes {
+        display: block;
+    }
+
+}
+
+/*---------- tela < 818px --------------*/
+
+/*---------------------------------------*/
+/*---------- tela-h < 660px ---------------*/
+/*---------------------------------------*/
+
+@media screen and (max-height: 660px) {
+
+    html {
+        padding-top: 100vh;
+    }
+
+}
+
+/*---------- tela < 818px --------------*/

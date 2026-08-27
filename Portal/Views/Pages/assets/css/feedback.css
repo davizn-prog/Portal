@@ -105,6 +105,7 @@ form.feedback .seletores input[type=checkbox],
 .seletores input[type=radio] {
     width: 20px;
     height: 20px;
+    display: none;
 }
 
 form.feedback .seletores label {

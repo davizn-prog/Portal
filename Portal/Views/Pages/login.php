@@ -10,9 +10,8 @@
 </head>
 
 <body>
-
     <div class="formulario">
-        <h2>Faça seu login ae meu paçero e entre na melhor comunidade da internet!</h2><!--titulo-->
+        <h2>Faça seu login e entre na melhor comunidade da internet!</h2><!--titulo-->
         <form method="post">
             <!--container do email-->
             <div class="input-container">
@@ -47,29 +46,37 @@
                 quis vestibulum sit amet, elementum eget sem.
             </p>
         </div><!--container-->
-        <h2>Melhor conteudo da internet está aqui</h2>
         <div class="container2">
-            <div class="container2-boxes">
-                <h2>Mais um texto aleatorio</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
-                    tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque in
-                    luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum ex,
-                    malesuada vestibulum augue.</p>
-            </div><!--container-->
-            <div class="container2-boxes">
-                <h2>Mais um texto aleatorio</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
-                    tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque in
-                    luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum ex,
-                    malesuada vestibulum augue.</p>
-            </div><!--container-->
-            <div class="container2-boxes">
-                <h2>Mais um texto aleatorio</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
-                    tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque in
-                    luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum ex,
-                    malesuada vestibulum augue.</p>
-            </div><!--container-->
+            <h2>Melhor conteudo da internet está aqui</h2>
+            <div class="container2-container-boxes">
+                <div class="container2-box">
+                    <h2>Mais um texto aleatorio</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
+                        tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque
+                        in
+                        luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum
+                        ex,
+                        malesuada vestibulum augue.</p>
+                </div><!--container-->
+                <div class="container2-box">
+                    <h2>Mais um texto aleatorio</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
+                        tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque
+                        in
+                        luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum
+                        ex,
+                        malesuada vestibulum augue.</p>
+                </div><!--container-->
+                <div class="container2-box">
+                    <h2>Mais um texto aleatorio</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id sodales nisl. Cras vestibulum
+                        tortor vitae ante dignissim, ut rutrum lorem molestie. Maecenas suscipit aliquet auctor. Quisque
+                        in
+                        luctus ipsum. Nulla varius diam eu eleifend pharetra. Mauris non congue nulla. Duis id dictum
+                        ex,
+                        malesuada vestibulum augue.</p>
+                </div><!--container-->
+            </div>
         </div><!--container-->
     </div>
 </body>

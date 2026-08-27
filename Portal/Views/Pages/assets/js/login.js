@@ -6,9 +6,10 @@ $(function () {
     $(window).scroll(function () {
         janelaPosY = $(window).scrollTop();//armazena a posição atual do scroll vertical da janela
         janelaAltura = $(window).height();//e a altura dela 
+        var alturaEfeito = getComputedStyle(document.documentElement).getPropertyValue('altura-efeito');
         
         $('.containeres').each(function () {
-            if (janelaPosY > 400) {
+            if (janelaPosY > alturaEfeito) {
                 $('.formulario').css({
                     'opacity': '0%',
                 });

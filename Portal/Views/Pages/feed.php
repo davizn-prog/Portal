@@ -19,8 +19,18 @@
     <div class="feed">
         <div class="feed-wraper">
             <div class="feed-form">
-                <form method="post">
-                    <textarea required="" name="post_content" placeholder="No que você está pensando?"></textarea>
+                <form method="post" enctype="multipart/form-data">
+                    <textarea name="post_content" placeholder="No que você está pensando?"></textarea>
+
+                    <select name="tipo_post" required>
+                        <option value="texto">Texto comum</option>
+                        <option value="resenha">Resenha</option>
+                        <option value="video">Vídeo</option>
+                        <option value="musica">Música</option>
+                    </select>
+
+                    <input type="file" name="arquivo_midia" accept="image/*,video/*,audio/*">
+
                     <input type="hidden" name="post_feed">
                     <input type="submit" name="acao" value="Postar!">
                 </form>
@@ -69,9 +79,32 @@
                             <p><?php echo date('d/m/Y H:i:s', strtotime($value['data'])) ?></p>
                         </div>
                     </div>
+
                     <div class="feed-single-post-content">
-                        <?php echo $value['conteudo'] ?>
+
+                        <p><?php echo $value['conteudo']; ?></p>
+
+                        <?php if ($value['tipo'] == 'video' && $value['arquivo_url'] != ''): ?>
+
+                            <video controls style="width: 100%; max-height: 400px;">
+                                <source src="<?php echo INCLUDE_PATH; ?>uploads/<?php echo $value['arquivo_url']; ?>">
+                            </video>
+
+                        <?php elseif ($value['tipo'] == 'musica' && $value['arquivo_url'] != ''): ?>
+
+                            <audio controls style="width: 100%;">
+                                <source src="<?php echo INCLUDE_PATH; ?>uploads/<?php echo $value['arquivo_url']; ?>">
+                            </audio>
+
+                        <?php elseif ($value['tipo'] == 'resenha'): ?>
+
+                            <div class="estilo-resenha">
+                                <span>⭐ Resenha do Usuário ⭐</span>
+                            </div>
+
+                        <?php endif; ?>
                     </div>
+
                 </div>
 
             <?php } ?>
@@ -556,7 +589,10 @@
             </div><!--container de informações da resenha-->
         </div><!--banner resenha medio-->
     </div><!--container dos banners das resenha-->
+</section><!--seção das resenhas-->
 
+<!--seção das musicas-->
+<section id="Musica" class="MOD-secao home-musica" target="sec" goto="">
     <!--MODULO - cabeçalho de seção-->
     <div class="MOD-container-cabecalho-secao">
         <div class="MOD-container-h1">
@@ -566,5 +602,16 @@
         <div class="MOD-ver-mais hoverP2"><a class="link-ajax" href=""></a></div><!--link pra pagina da seção-->
         <div class="clear"></div><!--limpeza de flutuação-->
     </div><!--MODULO - cabeçalho de seção-->
+</section><!--seção das musicas-->
 
-</section><!--seção das resenhas-->
+<!--seção das imagens-->
+<section id="Galeria" class="MOD-secao home-galeria" target="sec" goto="">
+    <div class="MOD-container-cabecalho-secao">
+        <div class="MOD-container-h1">
+            <h1>Galeria</h1>
+            <div class="MOD-h1-linha"></div><!--linha que aparece em baixo do texto-->
+        </div>
+        <div class="MOD-ver-mais hoverP2"><a class="link-ajax" href=""></a></div><!--link pra pagina da seção-->
+        <div class="clear"></div><!--limpeza de flutuação-->
+    </div><!-- modulo - cabeçalho de seção-->
+</section><!--seção das imagens-->

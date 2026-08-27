@@ -6,9 +6,15 @@
 
 
 .editar-perfil{
-	padding:20px;
 	width: 100%;
 }
+
+.editar-perfil img{
+	margin: 20px;
+	border: var(--borda-elemento2);
+    border-radius: var(--redondez);
+}
+
 
 .editar-perfil input[type=text],
 .editar-perfil input[type=password]{
