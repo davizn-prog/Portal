@@ -14,7 +14,7 @@ function initVideos() {
     //preenche os arrays com os nomes dos arquivos
     for (let i = 0; i <= videoQuantidade; i++) {
         videos[0][i] = $('.video,.short').eq(i).attr('name');//array pra colocar na src do video
-        videos[1][i] = $('.video,.short').eq(i).attr('name').replace(/\.[^/.]+$/, "");//array pra colocar na h1 do player
+        videos[1][i] = $('.titulo-video').eq(i).text();//array pra colocar na h1 do player
     }
 
     sessionStorage.setItem('videos', JSON.stringify(videos));//guarda o conteudo de videos na sessão e converte pra json
@@ -40,7 +40,7 @@ function initVideos() {
         $('.container-gameplay > h1').text(tituloAtual);//e aplica
 
         //aqui atualiza a src
-        $('source').attr('src', INCLUDE_PATH_STATIC + 'assets/videos/gameplays/' + identificador);
+        $('source').attr('src', INCLUDE_PATH + 'uploads/' + identificador);
 
         //carrega e da play no video
         $('video')[0].load();
@@ -72,7 +72,7 @@ function initPlayer() {
     if (identificador && ids) {//se as variaveis estiverem preenchidas (ver video.js)
         var titulo = ids[1][posicaoAtual];//coloca o titulo numa variavel
         $('.container-gameplay>h1').text(titulo);//e aplica
-        $('source').attr('src', INCLUDE_PATH_STATIC + 'assets/videos/gameplays/' + identificador);//posicaoAtualiza a src
+        $('source').attr('src', INCLUDE_PATH + 'uploads/' + identificador);//posicaoAtualiza a src
         $('video')[0].load();//e carrega
     }
 
@@ -80,7 +80,7 @@ function initPlayer() {
     // Botão Anterior
     $('.container-central__conteudos').off('click', '[videoAnterior]').on('click', '[videoAnterior]', function () {
         if (posicaoAtual > 0) {//se nao tiver no primeiro video (nao pode voltar mais)
-            $('source').attr('src', INCLUDE_PATH_STATIC + 'assets/videos/gameplays/' + ids[0][posicaoAnterior]);
+            $('source').attr('src', INCLUDE_PATH + 'uploads/' + ids[0][posicaoAnterior]);
             $('video')[0].load();
             $('video')[0].play();
 
@@ -101,7 +101,7 @@ function initPlayer() {
     // Botão Próximo
     $('.container-central__conteudos').off('click', '[proximoVideo]').on('click', '[proximoVideo]', function () {
         if (posicaoAtual < videoQuantidade) {
-            $('source').attr('src', INCLUDE_PATH_STATIC + 'assets/videos/gameplays/' + ids[0][proximaPosicao]);
+            $('source').attr('src', INCLUDE_PATH + 'uploads/' + ids[0][proximaPosicao]);
             $('video')[0].load();
             $('video')[0].play();
 

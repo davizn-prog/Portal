@@ -17,7 +17,7 @@ function initMusica() {
         pauseBtn.addEventListener('click', (e) => {//adiciona um leitor constante de evento no botao de pause. 
             e.preventDefault();//impede a execução de algum evento padrão que o navegador faria nesse caso
 
-            playBtn.style.display = "inline";//mostra o botao de play
+            playBtn.style.display = "inherit";//mostra o botao de play
             pauseBtn.style.display = "none";//esconde o botao pause
             audioPlayer.pause();//pausa o audio
             return false;
@@ -28,7 +28,7 @@ function initMusica() {
             e.preventDefault();//impede a execução de algum evento padrão que o navegador faria nesse caso
 
             playBtn.style.display = "none";//esconde o botao play
-            pauseBtn.style.display = "inline";//mostra o botao de pause
+            pauseBtn.style.display = "inherit";//mostra o botao de pause
             audioPlayer.play();//da play no audio
             return false;
         });
@@ -72,27 +72,32 @@ function initMusica() {
         });
 
         audioPlayer.onloadstart = () => {//quando começar um carregamento na faixa de audio
-            alert('começou carregar.');//avisa
+            // alert('começou carregar.');
+            //avisa
         };
 
         audioPlayer.oncanplaythrough = function () {//quando terminar o carregamento da faixa
-            alert("Can start playing video");//avisa
+            // alert("Can start playing video");
+            //avisa
             audioPlayer.play();//e da play automaticamente
-            alert(audioPlayer.duration);//e avisa quanto tempo tem a musica
+            // alert(audioPlayer.duration);
+            //e avisa quanto tempo tem a musica
             segundoTotal = audioPlayer.duration;
         };
 
         //um leitor de evento no play do audio pra avisar que começou a tocar
         audioPlayer.addEventListener('play', function () {
-            console.log('começou a tocar');
+            // console.log('começou a tocar');
         });
 
         //um leitor de evento constante pra ler em qual segundo de reprodução a faixa está.
         audioPlayer.addEventListener('timeupdate', (e) => {
             currentTime = audioPlayer.currentTime;//a variavel recebe o segundo exato na qual está a reprodução
-            console.log('current time: ' + currentTime);//e exibe no console
+            // console.log('current time: ' + currentTime);
+            //e exibe no console
             progresso = ((currentTime / segundoTotal) * 100).toFixed(1);//variavel usada pra indicar o percentual de quanto a musica ja foi reproduzida (barra de progresso).
-            console.log('progresso: ' + progresso);//e exibe no console
+            // console.log('progresso: ' + progresso);
+            //e exibe no console
         });
 
         setInterval(function () {

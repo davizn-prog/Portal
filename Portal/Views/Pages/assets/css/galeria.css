@@ -9,7 +9,7 @@
 
 .img-wraper {
     width: 33.3%;
-    padding-top: calc(33.3% / 1.6);
+    /* padding-top: calc(33.3% / 1.6); */
     /*esse calc diminuiu o tamanho da altura pelo resultado desse calculo, deixando do tamanho de uma imagem 16:9*/
     padding-top: 33.3%;
     float: left;

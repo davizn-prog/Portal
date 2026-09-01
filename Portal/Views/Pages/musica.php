@@ -2,96 +2,36 @@
     <link href="<?php echo INCLUDE_PATH_STATIC ?>assets/css/musica.css" type="text/css" rel="stylesheet" />
 </header>
 
-<?php
-include('includes/painel-fixo.php');
-?>
-
 <!--Seção de musica-->
-<section id="Musica" class="MOD-secao secao-musica" target="sec" goto=""><!-- MOD - menu-scroll -->
-    <h1>Playlists</h1><!--titulo da seção-->
+<section id="Audio" class="MOD-secao secao-musica" target="sec" goto=""><!-- MOD - menu-scroll -->
+
+    <h1>Musicas</h1><!--titulo da seção-->
 
     <!--o container das playlists-->
     <div class="container-das-playlists">
 
-        <!--um bloco clicavel pra acessar a playlist-->
-        <div class="banner-playlist hoverP"
-            data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
-            data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
-            data-file="<?php echo INCLUDE_PATH_STATIC ?>assets/audio/music.mp3">
+        <?php
 
-            <h3>Nome da Musica</h3>
-            <p>Artista</p>
-        </div><!--um bloco clicavel pra acessar a playlist-->
+        $musicasPostadas = \Portal\Models\MusicaModel::postsMusica();
 
-        <!--um bloco clicavel pra acessar a playlist-->
-        <div class="banner-playlist hoverP"
-            data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
-            data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
-            data-file="<?php echo INCLUDE_PATH_STATIC ?>assets/audio/music.mp3">
+        foreach ($musicasPostadas as $key => $mp3Info) {
 
-            <h3>Nome da Musica</h3>
-            <p>Artista</p>
-        </div><!--um bloco clicavel pra acessar a playlist-->
+        ?>
 
-        <!--um bloco clicavel pra acessar a playlist-->
-        <div class="banner-playlist hoverP"
-            data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
-            data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
-            data-file="<?php echo INCLUDE_PATH_STATIC ?>assets/audio/music.mp3">
+            <!--um bloco clicavel pra acessar a playlist-->
+            <div class="banner-playlist hoverP"
 
-            <h3>Nome da Musica</h3>
-            <p>Artista</p>
-        </div><!--um bloco clicavel pra acessar a playlist-->
+                data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
+                data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
+                data-file="<?php echo INCLUDE_PATH ?>uploads/<?php echo  $mp3Info['arquivo_url']?>"
+                
+            >
 
-        <!--um bloco clicavel pra acessar a playlist-->
-        <div class="banner-playlist hoverP"
-            data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
-            data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
-            data-file="<?php echo INCLUDE_PATH_STATIC ?>assets/audio/music.mp3">
+                <h3>Nome da Musica</h3>
+                <p>Artista</p>
+            </div><!--um bloco clicavel pra acessar a playlist-->
 
-            <h3>Nome da Musica</h3>
-            <p>Artista</p>
-        </div><!--um bloco clicavel pra acessar a playlist-->
-
-        <!--um bloco clicavel pra acessar a playlist-->
-        <div class="banner-playlist hoverP"
-            data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
-            data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
-            data-file="<?php echo INCLUDE_PATH_STATIC ?>assets/audio/music.mp3">
-
-            <h3>Nome da Musica</h3>
-            <p>Artista</p>
-        </div><!--um bloco clicavel pra acessar a playlist-->
-
-        <!--um bloco clicavel pra acessar a playlist-->
-        <div class="banner-playlist hoverP"
-            data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
-            data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
-            data-file="<?php echo INCLUDE_PATH_STATIC ?>assets/audio/music.mp3">
-
-            <h3>Nome da Musica</h3>
-            <p>Artista</p>
-        </div><!--um bloco clicavel pra acessar a playlist-->
-
-        <!--um bloco clicavel pra acessar a playlist-->
-        <div class="banner-playlist hoverP"
-            data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
-            data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
-            data-file="<?php echo INCLUDE_PATH_STATIC ?>assets/audio/music.mp3">
-
-            <h3>Nome da Musica</h3>
-            <p>Artista</p>
-        </div><!--um bloco clicavel pra acessar a playlist-->
-
-        <!--um bloco clicavel pra acessar a playlist-->
-        <div class="banner-playlist hoverP"
-            data-image="<?php echo INCLUDE_PATH_STATIC ?>assets/img/temas/ocean deep digital/playlist icon2.png"
-            data-artist="Guns N Roses" data-song="Sweet Child Of Mine"
-            data-file="<?php echo INCLUDE_PATH_STATIC ?>assets/audio/music.mp3">
-
-            <h3>Nome da Musica</h3>
-            <p>Artista</p>
-        </div><!--um bloco clicavel pra acessar a playlist-->
+        <?php } ?>
     </div>
     <!--o container das playlists-->
 
@@ -106,9 +46,10 @@ include('includes/painel-fixo.php');
 
             <div class="container-controles">
                 <div class="retroceder controles"></div>
-                <div class="play-pause controles" id="play"></div>
-                <div class="play-pause controles" id="pause"></div>
+                <div class="controles" id="play"></div>
+                <div class="controles" id="pause"></div>
                 <div class="avançar controles"></div><!--botoes de controle das faixas-->
+                <div class="clear"></div><!--limpeza de flutuação-->
             </div>
             <div class="container-reproducao">
                 <div class="reproducao"></div>

@@ -238,24 +238,17 @@ function initHome() {
 
     $(function () {
 
-        var quantidade = 5;
+        var quantidade = 3;
         var emExibicao = 1;
         var tamanhoOverflow;
         var tamanhoVideo;
         var scrollInicial;
 
-        var posicaoAtual = 2; // Índice 0 a 4 (meio = 2)
+        var posicaoAtual = 1; // Índice 0 a 4 (meio = 2)
         var posicaoMaxima = quantidade - 1;
 
-        // 1. Inserção dinâmica dos vídeos
-        for (let i = 1; i <= quantidade; i++) {
-            $('.container-banner-videos-g').append(
-                '<div class="banner-g"><video class="video-g" controls loop><source src="http://localhost/Portal/Portal/Views/Pages/assets/videos/gameplays/gameplay0' + i + '.mp4"></video></div>'
-            );
-        }
-
         tamanhoVideo = $('.banner-g').outerWidth(true);
-        tamanhoOverflow = (tamanhoVideo * quantidade) + 2;
+        tamanhoOverflow = (tamanhoVideo * quantidade) + 20;
         scrollInicial = posicaoAtual * tamanhoVideo;
 
         $('.container-banner-videos-g').css('width', tamanhoOverflow);

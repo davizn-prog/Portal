@@ -18,100 +18,103 @@
 
     <div class="feed">
         <div class="feed-wraper">
+
             <div class="feed-form">
                 <form method="post" enctype="multipart/form-data">
                     <textarea name="post_content" placeholder="No que você está pensando?"></textarea>
 
-                    <select name="tipo_post" required>
-                        <option value="texto">Texto comum</option>
-                        <option value="resenha">Resenha</option>
-                        <option value="video">Vídeo</option>
-                        <option value="musica">Música</option>
-                    </select>
+                    <input type="file" name="arquivo_midia" id="videoInput" accept="image/*,video/*,audio/*">
+                    <input type="hidden" name="duracao_video" id="duracaoVideo" value="0">
 
-                    <input type="file" name="arquivo_midia" accept="image/*,video/*,audio/*">
-
-                    <input type="hidden" name="post_feed">
+                    <input type="hidden" name="post_feed" value="1">
                     <input type="submit" name="acao" value="Postar!">
                 </form>
-            </div><!--feed-form-->
+            </div>
+
 
             <?php
-
-            $retrievePosts = \Portal\Models\HomeModel::retrieveFriendsPosts();
-
-            foreach ($retrievePosts as $key => $value) {
-
+            $retrievePosts = \Portal\Models\HomeModel::retrieveFriendsPosts();//armazena os posts 
+            foreach ($retrievePosts as $key => $value) {//e vai colocando eles
                 ?>
 
+                <!-- um post -->
                 <div class="feed-single-post">
+
+                    <!-- os dados do autor do post -->
                     <div class="feed-single-post-author">
+
+                        <!-- aqui coloca a imagem do usuario -->
                         <div class="img-single-post-author">
+                            <?php if (!isset($value['me']) && $value['img'] == '') { ?><!-- se nao for o usuario da seção e não tiver foto -->
 
-                            <?php if (!isset($value['me']) && $value['img'] == '') { ?>
+                                <img
+                                    src="<?php echo INCLUDE_PATH_STATIC ?>imagens/avatar.jpg" /><!-- coloca uma imagem padrão -->
 
-                                <img src="<?php echo INCLUDE_PATH_STATIC ?>imagens/avatar.jpg" />
+                            <?php } else if (!isset($value['me'])) { ?><!-- se tambem nao for o usuario da seção mas tiver foto -->
 
-                            <?php } else if (!isset($value['me'])) { ?>
-
-                                    <img src="<?php echo INCLUDE_PATH ?>uploads/<?php echo $value['img'] ?>" />
+                                    <img
+                                        src="<?php echo INCLUDE_PATH ?>uploads/<?php echo $value['img'] ?>" /><!-- exibe a foto do usuario do post -->
 
                             <?php } ?>
 
-                            <?php if (isset($value['me']) && $_SESSION['img'] == '') { ?>
+                            <?php if (isset($value['me']) && $_SESSION['img'] == '') { ?><!-- mas se o post for do usuario da seção e ele nao tiver foto ainda -->
 
-                                <img src="<?php echo INCLUDE_PATH_STATIC ?>imagens/avatar.jpg" />
+                                <img
+                                    src="<?php echo INCLUDE_PATH_STATIC ?>imagens/avatar.jpg" /><!-- coloca uma imagem padrao -->
 
-                            <?php } else if (isset($value['me'])) { ?>
+                            <?php } else if (isset($value['me'])) { ?><!-- caso o usuaro da seção tenha uma imagem cadastrada -->
 
-                                    <img src="<?php echo INCLUDE_PATH ?>uploads/<?php echo $_SESSION['img'] ?>" />
+                                    <img src="<?php echo INCLUDE_PATH ?>uploads/<?php echo $_SESSION['img'] ?>" /><!-- exibe ela -->
+
                             <?php } ?>
+                        </div><!-- aqui coloca a imagem do usuario -->
 
-                        </div>
+                        <!-- aqui os dados do autor -->
                         <div class="feed-single-post-author-info">
-                            <?php if (isset($value['me'])) { ?>
-                                <h3><?php echo $_SESSION['nome']; ?> (eu)</h3>
+                            <?php if (isset($value['me'])) { ?><!-- se for o usuario da seção -->
+                                <h3><?php echo $_SESSION['nome']; ?> (eu)</h3><!-- poe o nome dele e um identificador -->
                             <?php } else { ?>
 
-                                <h3><?php echo $value['usuario'] ?></h3>
+                                <h3><?php echo $value['usuario'] ?></h3><!-- se nao, so o nome mesmo -->
 
                             <?php } ?>
                             <p><?php echo date('d/m/Y H:i:s', strtotime($value['data'])) ?></p>
-                        </div>
-                    </div>
+                            <!-- e a data que o post foi feito -->
+                        </div><!-- aqui os dados do autor -->
+                    </div><!-- os dados do autor do post -->
 
+                    <!-- o conteudo postado -->
                     <div class="feed-single-post-content">
 
-                        <p><?php echo $value['conteudo']; ?></p>
+                        <p><?php echo $value['conteudo']; ?></p><!-- se for texto exibe o conteudo dentro da tag -->
 
-                        <?php if ($value['tipo'] == 'video' && $value['arquivo_url'] != ''): ?>
+                        <?php if ($value['tipo'] == 'video' && $value['arquivo_url'] != ''): ?><!-- se for um arquivo de video e o video existir -->
 
                             <video controls style="width: 100%; max-height: 400px;">
                                 <source src="<?php echo INCLUDE_PATH; ?>uploads/<?php echo $value['arquivo_url']; ?>">
+                                <!-- coloca o video com caminho do video na url -->
                             </video>
 
-                        <?php elseif ($value['tipo'] == 'musica' && $value['arquivo_url'] != ''): ?>
+                        <?php elseif ($value['tipo'] == 'musica' && $value['arquivo_url'] != ''): ?><!-- e se for musica -->
 
                             <audio controls style="width: 100%;">
                                 <source src="<?php echo INCLUDE_PATH; ?>uploads/<?php echo $value['arquivo_url']; ?>">
-                            </audio>
+                                <!-- coloca a audio caminho da musica na url -->
+                            </audio>''
 
-                        <?php elseif ($value['tipo'] == 'resenha'): ?>
+                        <?php elseif ($value['tipo'] == 'imagem' && $value['arquivo_url'] != ''): ?><!-- e se for musica -->
 
-                            <div class="estilo-resenha">
-                                <span>⭐ Resenha do Usuário ⭐</span>
-                            </div>
+                            <img src="<?php echo INCLUDE_PATH; ?>uploads/<?php echo $value['arquivo_url']; ?>" alt="">
 
                         <?php endif; ?>
-                    </div>
-
-                </div>
-
+                    </div><!-- o conteudo postado -->
+                </div><!-- um post -->
             <?php } ?>
         </div>
     </div><!--feed-->
 </section>
 <!-- feed de postagens -->
+
 <!--seção de novidades-->
 <section id="Novidades" class="MOD-secao home-novidades" target="sec" goto="">
 
@@ -164,8 +167,6 @@
         <!--container dos shorts-->
         <div class="container-shorts">
 
-
-
             <!--short-->
             <div class="short hoverM" name="gameplay01.mp4">
                 <a class="link-ajax" href="videos">
@@ -187,232 +188,13 @@
                 </a><!--o link para o exbibidor-->
             </div><!--short-->
 
-
-
-
-            <!--short-->
-            <div class="short hoverM" name="gameplay02.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video ">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short02.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div><!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-            <!--short-->
-            <div class="short hoverM" name="gameplay03.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video ">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short03.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div><!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-            <!--short-->
-            <div class="short hoverM" name="gameplay04.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video ">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short04.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div><!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-
-            <!--short-->
-            <div class="short hoverM" name="gameplay05.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video ">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short05.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div>
-                    <!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-
-            <!--short-->
-            <div class="short hoverM" name="gameplay06.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video ">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short06.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div>
-                    <!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-
-            <!--short-->
-            <div class="short hoverM" name="gameplay07.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video ">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short07.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div>
-                    <!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do
-                            cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-
-            <!--short-->
-            <div class="short hoverM" name="gameplay08.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video ">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short08.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div>
-                    <!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do
-                            cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-
-            <!--short-->
-            <div class="short hoverM" name="gameplay09.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short09.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div>
-                    <!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do
-                            cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem
-                            upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-
-            <!--short-->
-            <div class="short hoverM" name="gameplay10.mp4">
-
-                <a class="link-ajax" href="videos">
-                    <video muted loop class="short-video ">
-                        <source src="<?php echo INCLUDE_PATH_STATIC ?>assets/videos/gameplays/shorts/short10.mp4" />
-                    </video>
-                    <div class="autor-cartao"><span>Davi Cavalcante</span></div>
-                    <!--autor do video-->
-                    <div class="metadados-cartao">
-                        <span class="titulo-cartao">Titulo do
-                            cartão</span><!--titulo do cartao-->
-                        <span class="descricao-cartao">
-                            breve descrição do cartão lorem upsum lorem upsum lorem
-                            upsum
-                        </span><!--descrição do cartao-->
-                        <div>
-                            <img src="<?php echo INCLUDE_PATH_STATIC ?>assets/view.png" alt=""
-                                class="imagem-views"><!--imagem representativa-->
-                            <span class="views">576</span>
-                        </div><!--container das views-->
-                    </div><!--metadados do video-->
-                </a><!--o link para o exbibidor-->
-
-            </div><!--short-->
-
         </div><!--container dos shorts-->
     </div><!--container pro overflow dos shorts-->
 
     <!--container dos banners dos videos-->
     <div class="container-banner-videos">
         <div class="container-banner-videos-m">
+
             <div class="container-video hoverP2">
                 <video src="<?php echo INCLUDE_PATH_STATIC ?>"></video><!--video-->
             </div><!--container de video-->
@@ -434,7 +216,23 @@
         </div>
         <div class="overflow-video-g">
             <div class="container-banner-videos-g">
-                <!-- aqui vao os videos do carrocel -->
+
+                <?php
+
+                $videosPostados = \Portal\Models\VideosModel::postsVideos();
+
+                foreach ($videosPostados as $key => $vdInfo) {
+
+                    ?>
+
+                    <div class="banner-g">
+                        <video class="video-g" controls loop>
+                            <source src="<?php echo INCLUDE_PATH ?>uploads/<?php echo $vdInfo['arquivo_url'] ?>">
+                        </video>
+                    </div>
+
+                <?php } ?>
+
             </div>
         </div><!--container grande-->
     </div><!--container dos banners dos videos-->
@@ -615,3 +413,17 @@
         <div class="clear"></div><!--limpeza de flutuação-->
     </div><!-- modulo - cabeçalho de seção-->
 </section><!--seção das imagens-->
+<script>
+    document.getElementById('videoInput').addEventListener('change', function (event) {
+        let file = event.target.files[0];
+        if (file && file.type.startsWith('video/')) {
+            let video = document.createElement('video');
+            video.preload = 'metadata';
+            video.onloadedmetadata = function () {
+                window.URL.revokeObjectURL(video.src); // Limpa a memória
+                document.getElementById('duracaoVideo').value = Math.round(video.duration);
+            }
+            video.src = URL.createObjectURL(file);
+        }
+    });
+</script>

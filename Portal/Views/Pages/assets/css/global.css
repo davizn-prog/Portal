@@ -726,7 +726,7 @@ header {
     scrollbar-color: var(--cor-elemento1) transparent;
 }
 
-.menu2-container-navegacao{
+.menu2-container-navegacao {
     width: 500px;
 }
 
@@ -854,7 +854,7 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
 .friends-request-feed {
     width: 275px;
     height: 99vh;
-    padding: 30px;
+    padding: 20px;
     border: var(--borda-elemento2);
     border-radius: var(--redondez);
     color: var(--cor-destaque);
@@ -876,7 +876,6 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
     width: max-content;
     display: flex;
     margin: 30px 0;
-    padding: 10px 25px;
     border-right: var(--borda-elemento1);
     border-left: var(--borda-elemento1);
     border-radius: var(--redondez);
@@ -1009,10 +1008,10 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
         max-width: 1280px;
     }
 
-    .formulario {
+    /* .formulario {
         height: calc(100% + 17px);
         top: -9px;
-    }
+    } */
 
 }
 
@@ -1118,7 +1117,7 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
         justify-content: center;
     }
 
-    .menu2-h span{
+    .menu2-h span {
         display: none;
     }
 
@@ -1146,22 +1145,12 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
     .friends-request-feed {
         display: none;
     }
-}
 
-/*---->> HEADER <<------*/
-/*----------- tela < 1990px -----------*/
-
-/*---------------------------------------*/
-/*---------- tela < 1360px --------------*/
-/*---------------------------------------*/
-
-@media screen and (max-width: 1360px) {
-
-    :root{
-        --nav-top-show:55px;
+    :root {
+        --nav-top-show: 55px;
     }
 
-    .menu-horizontal{
+    .menu-horizontal {
         height: 62px;
         width: 100%;
     }
@@ -1189,7 +1178,7 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
         align-items: center;
         justify-content: center;
         padding: 0 10px;
-        opacity: 0  ;
+        opacity: 0;
     }
 
     .MOD-nav-superior ul {
@@ -1216,7 +1205,6 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* Centraliza a UL no container */
         padding: 0 10px;
     }
 
@@ -1224,12 +1212,10 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* <<< AQUI: Centraliza os LI dentro da UL */
         height: 100%;
         width: 100%;
         margin: 0 auto;
         padding: 0;
-        /* Remove preenchimentos padrão de lista */
     }
 
     .MOD-nav-superior li {
@@ -1265,10 +1251,10 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
         font-size: clamp(17px, 2.1vw, 22px);
         margin: 0 1vw;
     }
-
 }
 
-/*---------- tela < 1350px --------------*/
+/*---->> HEADER <<------*/
+/*----------- tela < 1990px -----------*/
 
 /*---------------------------------------*/
 /*---------- tela < 1164px --------------*/
@@ -1302,11 +1288,7 @@ a[href="http://localhost/Portal/?loggout"]>.icone-menu {
 /*---------- tela < 850px --------------*/
 /*---------------------------------------*/
 
-@media screen and (max-width: 850px) {
-
-
-
-}
+@media screen and (max-width: 850px) {}
 
 /*---------- tela < 993px --------------*/
 

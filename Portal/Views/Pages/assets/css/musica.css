@@ -78,14 +78,14 @@
     margin-bottom: 20px;
 }
 
-.painel .controles {
+.controles {
     height: 50px;
     width: 50px;
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     border-radius: 50%;
-    display: inline-block;
+    float: left;
 }
 
 .retroceder {

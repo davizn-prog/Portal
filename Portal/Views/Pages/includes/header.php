@@ -43,6 +43,7 @@
         <?php } ?>
     </div>
     <!-- pedidos de amizade -->
+     
     <!-- MODULO - menu superior-->
     <nav class="MOD-menu-navegacao MOD-nav-superior">
         <ul>
@@ -89,7 +90,7 @@
                     <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>musica">
                         <div class="icone-menu"></div>
                     </a>
-                    <span>Musica</span>
+                    <span>Audio</span>
                 </div><!--container da opção-->
                 <div class="menu2-opcao-h">
                     <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>feedback">
@@ -172,7 +173,7 @@
                     <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>musica">
                         <div class="icone-menu"></div>
                     </a>
-                    <span>Musica</span>
+                    <span>Audio</span>
                 </div><!--container da opção-->
                 <div class="menu2-opcao-h">
                     <a class="link-ajax" href="<?php echo INCLUDE_PATH ?>galeria">
